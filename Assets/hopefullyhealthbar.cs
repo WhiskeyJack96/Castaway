@@ -7,7 +7,7 @@ public class hopefullyhealthbar : MonoBehaviour {
 
     public int maxHealth = 100;
     public int currentHealth;
-    public Slider healthSlider;
+    public sliding healthSlider;
 
     bool isDead;
     bool damaged;
@@ -21,7 +21,7 @@ public class hopefullyhealthbar : MonoBehaviour {
     {
         damaged = true;
         currentHealth -= amount;
-        healthSlider.value = currentHealth;
+        healthSlider.updateSlider(currentHealth);
         if(currentHealth <= 0 && !isDead)
         {
             Death();
