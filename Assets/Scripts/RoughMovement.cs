@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class RoughMovement : MonoBehaviour {
 
-	public float movespeed = 0.5f;
+	public float movespeed = 4f;
 
 	private Rigidbody2D rig;
 
@@ -50,11 +50,13 @@ public class RoughMovement : MonoBehaviour {
 		
 		}
 
-		Vector3 movement = new Vector3(xmove, ymove, 0) * movespeed; //NORMALIZE LATER FOR DIAGONAL MOVEMENT
+		Vector3 movement = new Vector3(xmove, ymove, 0); //NORMALIZE LATER FOR DIAGONAL MOVEMENT
 
-		rig.MovePosition(transform.position + movement);	
+		rig.velocity = movement.normalized * movespeed;	
 
 	}
+
+	
 	/*protected IEnumberator SmoothMovement (Vector3 direction)
 	{
 	
