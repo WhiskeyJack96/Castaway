@@ -28,19 +28,21 @@ public class Skeleton : MonoBehaviour {
 		AttemptMove();
 	}
 
-	void AttemptMove() 
+	void AttemptMove() //Shoots if in range or starts the move function
 	{
 		if (movement.sqrMagnitude <= shootingdistance)
 		{
 			rig.velocity = new Vector3 (0,0,0);
+			GetComponent<EnemyRangedAttack>().inrange(true);
 			return;
 		}
 		else
 			move();
+			GetComponent<EnemyRangedAttack>().inrange(false);
 	}
 
 
-	void move()
+	void move() //Moves toward player
 	{
 		//Vector3 movement = new  Vector3(playerx - transform.position.x, playery - transform.position.y, 0).normalized * movespeed;
 		rig.velocity = movement.normalized * movespeed;
