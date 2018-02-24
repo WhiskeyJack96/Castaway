@@ -45,9 +45,9 @@ public class meleeAttack : MonoBehaviour {
             //Debug.DrawRay(transform.position, new Vector2(Mathf.Cos(initTheta + (i*incrementTheta)), Mathf.Sin(initTheta + (i*incrementTheta))),Color.red, 3f);
             if(hit>0){
                 for(int j =0; j <2;j++){
-                    if(res[j].tranform.gameObject.tag == "Enemy")
+                    if(res[j].transform.gameObject.tag == "Enemy")
                     {
-                       res[j].GetComponent<EnemyHealth>().updateHealth(damage);
+                       res[j].transform.gameObject.GetComponent<EnemyHealth>().updateHealth(damage);
                     }
                 }
             }
