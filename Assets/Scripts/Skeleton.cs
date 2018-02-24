@@ -4,13 +4,13 @@ using UnityEngine;
 
 public class Skeleton : MonoBehaviour {
 	public int damage = 20;
-	private int Health = 15;
-	private float movespeed = 1f;
+	public int Health = 15;
+	public float movespeed = 1f;
 	public GameObject Player;
 	private float playerx = 0f;
 	private float playery = 0f;
 	private Rigidbody2D rig;
-	private float shootingdistance = 225f;
+	public float shootingdistance = 225f;
 	private Vector3 movement;
 
 	// Use this for initialization
