@@ -5,7 +5,7 @@ using UnityEngine;
 public class RoughMovement : MonoBehaviour {
 
 	public float movespeed = 4f;
-
+	public bool isrolling = false;
 	private Rigidbody2D rig;
 
 	// Use this for initialization
@@ -17,10 +17,13 @@ public class RoughMovement : MonoBehaviour {
 	}
 	
 	// Update is called ~30 times per second
-	void FixedUpdate () 
+	void FixedUpdate ()
 	{
-		face();
-		move();
+		face ();
+		if (isrolling == false)
+		{
+			move ();
+		}
 	}
 
 	void face()
@@ -39,36 +42,31 @@ public class RoughMovement : MonoBehaviour {
 	{
 		float xmove = 0;
 		float ymove = 0;
-		if(Input.GetKey(KeyCode.W))
-		{
+		if (Input.GetKey (KeyCode.W)) {
 			ymove = 1;
 			
 		}
 
-		if(Input.GetKey(KeyCode.A))
-		{
+		if (Input.GetKey (KeyCode.A)) {
 			xmove = -1;
 		
 		}
 
-		if(Input.GetKey(KeyCode.S))
-		{
+		if (Input.GetKey (KeyCode.S)) {
 			ymove = -1;
 		
 		}
 
-		if(Input.GetKey(KeyCode.D))
-		{
+		if (Input.GetKey (KeyCode.D)) {
 			xmove = 1;
 		
 		}
 
-		Vector3 movement = new Vector3(xmove, ymove, 0); //NORMALIZE LATER FOR DIAGONAL MOVEMENT
+		Vector3 movement = new Vector3 (xmove, ymove, 0); //NORMALIZE LATER FOR DIAGONAL MOVEMENT
 
 		rig.velocity = movement.normalized * movespeed;	
-
+	
 	}
-
 	
 	/*protected IEnumberator SmoothMovement (Vector3 direction)
 	{
