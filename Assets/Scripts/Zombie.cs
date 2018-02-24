@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Zombie : MonoBehaviour {
 	public int damage = 20;
-	private int Health = 15;
+	public int zhealth =15;
+	private EnemyHealth health;
 	private float movespeed = 1f;
 	public GameObject Player;
 	private float playerx = 0f;
@@ -15,6 +16,8 @@ public class Zombie : MonoBehaviour {
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
 		Player = GameObject.Find("Player");
+		health = GetComponent<EnemyHealth>();
+		health.setHealth(zhealth);
 	}
 	
 	// Update is called once per frame

@@ -22,7 +22,7 @@ public class hopefullyhealthbar : MonoBehaviour {
         damaged = true;
         print("ouch");
         currentHealth -= amount;
-        healthSlider.updateSlider(currentHealth);
+        //healthSlider.updateSlider(currentHealth);
         if(currentHealth <= 0 && !isDead)
         {
             Death();
