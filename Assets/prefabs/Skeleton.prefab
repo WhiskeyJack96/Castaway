@@ -22,11 +22,12 @@ GameObject:
   - component: {fileID: 212829183525847382}
   - component: {fileID: 114090406379220452}
   - component: {fileID: 50590623113118850}
-  - component: {fileID: 61862408439342968}
   - component: {fileID: 114284081824672830}
+  - component: {fileID: 114181509814072852}
+  - component: {fileID: 58707570462293828}
   m_Layer: 0
   m_Name: Skeleton
-  m_TagString: Untagged
+  m_TagString: Enemy
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -39,7 +40,7 @@ Transform:
   m_GameObject: {fileID: 1944954517620204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -12.96, y: 0.2, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 10, y: 10, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -64,8 +65,8 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
---- !u!61 &61862408439342968
-BoxCollider2D:
+--- !u!58 &58707570462293828
+CircleCollider2D:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
@@ -77,18 +78,8 @@ BoxCollider2D:
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
-  m_SpriteTilingProperty:
-    border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 0.2, y: 0.2}
-    newSize: {x: 0.2, y: 0.2}
-    adaptiveTilingThreshold: 0.5
-    drawMode: 0
-    adaptiveTiling: 0
-  m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 2.56, y: 2.56}
-  m_EdgeRadius: 0
+  m_Radius: 0.1
 --- !u!114 &114090406379220452
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -104,7 +95,22 @@ MonoBehaviour:
   shealth: 15
   movespeed: 1
   Player: {fileID: 0}
-  shootingdistance: 225
+  shootingdistance: 1000
+--- !u!114 &114181509814072852
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944954517620204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 460110336dab7a146a6911a14ed3aa87, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 1531712082079356, guid: 031a2fbd5a577964c839bc2f376e69d6, type: 2}
+  arrowSpeed: 55
+  Player: {fileID: 0}
+  range: 0
 --- !u!114 &114284081824672830
 MonoBehaviour:
   m_ObjectHideFlags: 1
