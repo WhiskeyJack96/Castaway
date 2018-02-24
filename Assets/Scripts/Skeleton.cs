@@ -6,6 +6,7 @@ public class Skeleton : MonoBehaviour {
 	public int damage = 20;
 	public int shealth = 15;
 	public float movespeed = 1f;
+	private EnemyHealth health;
 	public GameObject Player;
 	private float playerx = 0f;
 	private float playery = 0f;
