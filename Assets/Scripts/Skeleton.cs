@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Skeleton : MonoBehaviour {
 	public int damage = 20;
-	public int Health = 15;
+	public int shealth = 15;
 	public float movespeed = 1f;
 	public GameObject Player;
 	private float playerx = 0f;
@@ -17,6 +17,8 @@ public class Skeleton : MonoBehaviour {
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
 		Player = GameObject.Find("Player");
+		health = GetComponent<EnemyHealth>();
+		health.setHealth(shealth);
 	}
 	
 	// Update is called once per frame

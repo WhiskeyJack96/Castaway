@@ -10,7 +10,7 @@ public class Boar : MonoBehaviour {
 	public float waittime = .5f;
 	public int chargeduration = 1;
 	public int cooldown = 1;
-	public int Health = 15;
+	public int bhealth = 15;
 	public float movespeed = 1f;
 	public GameObject Player;
 	private float playerx = 0f;
@@ -20,11 +20,14 @@ public class Boar : MonoBehaviour {
 	private Vector3 movement;
 	private Vector3 oldpos;
 	private bool charging = false;
+	private EnemyHealth health;
 
 	// Use this for initialization
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
 		Player = GameObject.Find("Player");
+		health = GetComponent<EnemyHealth>();
+		health.setHealth(bhealth);
 	}
 	
 	// Update is called once per frame
