@@ -11,7 +11,7 @@ public class Skeleton : MonoBehaviour {
 	private float playerx = 0f;
 	private float playery = 0f;
 	private Rigidbody2D rig;
-	public float shootingdistance = 225f;
+	public float shootingdistance = 1600f;
 	private Vector3 movement;
 
 	// Use this for initialization

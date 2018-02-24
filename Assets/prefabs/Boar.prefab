@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 114402061022359426}
   - component: {fileID: 58256552319764990}
   - component: {fileID: 50456975863871610}
+  - component: {fileID: 114368280622677042}
   m_Layer: 0
   m_Name: Boar
   m_TagString: Untagged
@@ -78,6 +79,17 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 1.28
+--- !u!114 &114368280622677042
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1947327979231376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 71491c45ff8ac3b498487b127d9bb93e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!114 &114402061022359426
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -95,7 +107,7 @@ MonoBehaviour:
   waittime: 0.5
   chargeduration: 2
   cooldown: 1
-  Health: 15
+  bhealth: 15
   movespeed: 4
   Player: {fileID: 0}
   shootingdistance: 64
