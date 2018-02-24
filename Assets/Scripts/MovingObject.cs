@@ -1,10 +1,9 @@
-﻿using System.Collections;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class MovingObject : MonoBehaviour {
-	public int speed;
-	public float movetime = 0.1f;
+	/*public int speed;
 
 	private BoxCollider2D boxCollider;
 	private Rigidbody2D rb2D;
@@ -14,10 +13,10 @@ public class MovingObject : MonoBehaviour {
 		
 		boxCollider = GetCompenent<BoxCollider2D>();
 		rb2D = GetCompenent<Rigidbody2D>();
-		inverseMoveTime = 1f / movetime
+		inverseMoveTime =  1 / movetime; //I WANT SPEED VALUE PULLED FROM THE SPECIFIC THING LIKE ENEMY OR PLAYER
 
 	}
-	protected bool Move (int, xDir, yDir, out RaycastHit2D hit)
+	protected bool Move (int xDir, int yDir, out RaycastHit2D hit)
 	{
 		Vector2 start = transform.position;
 		Vector2 end = start + new Vector2 (xDir, yDir);
@@ -32,7 +31,7 @@ public class MovingObject : MonoBehaviour {
 			return true;
 		}
 
-		return false
+		return false;
 	}
 	
 	protected IEnumberator SmoothMovement (Vector3 end)
@@ -44,7 +43,7 @@ public class MovingObject : MonoBehaviour {
 			Vector3 newPostion = Vector3.MoveTowards (rb2D.postion, end, inverseMoveTime * Time.deltaTime);
 			rb2D.MovePosition(newPostion);
 			sqrRemainingDistance = (transform.position - end).sqrMagnitude;
-			yield return null
+			yield return null;
 		}
 	}
 
@@ -64,5 +63,5 @@ public class MovingObject : MonoBehaviour {
 
 	protected abstract void OnCantMove <T> (T component)
 		where T: Component;
-	
+	*/
 }
