@@ -15,7 +15,6 @@ public class Zombie : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
-		Player = GameObject.Find("Player");
 		health = GetComponent<EnemyHealth>();
 		health.setHealth(zhealth);
         
