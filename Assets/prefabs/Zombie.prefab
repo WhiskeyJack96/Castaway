@@ -116,7 +116,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   damage: 20
   zhealth: 15
-  Player: {fileID: 1770328706613274, guid: 8410ac2f72247cf4286792bfb6eb8514, type: 2}
+  Player: {fileID: 1443169951816220, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
 --- !u!212 &212961982199993638
 SpriteRenderer:
   m_ObjectHideFlags: 1
