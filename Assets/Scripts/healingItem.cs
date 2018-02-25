@@ -5,7 +5,7 @@ using UnityEngine;
 public class healingItem : MonoBehaviour {
     public int healAmount = -15;
 
-    public void OnCollisionEnter2D(Collision2D collider)
+    public void OnTriggerEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {
