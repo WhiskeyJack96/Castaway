@@ -14,7 +14,7 @@ public GameObject Player;
 	
 	// Update is called once per frame
 	void Update () {
-		transform.position = Player.transform.position;
+		transform.position = new Vector3(Player.transform.position.x, Player.transform.position.y, transform.position.z);
 
 
 		//Get player.transform.position, set camera position to this

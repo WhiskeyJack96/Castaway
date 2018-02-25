@@ -43,6 +43,7 @@ GameObject:
   - component: {fileID: 58148877131365168}
   - component: {fileID: 114200884391520012}
   - component: {fileID: 114442280309924066}
+  - component: {fileID: 114561552203957866}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -100,7 +101,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443169951816220}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 1.7741638, y: 1.6369373, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671856729146496}
@@ -152,7 +153,7 @@ PolygonCollider2D:
   m_Enabled: 1
   m_Density: 1
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
@@ -230,8 +231,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: -345
   healthSlider: {fileID: 0}
+--- !u!114 &114561552203957866
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443169951816220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 028d5609b5294be4ca1288b69406f14f, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  weapon: {fileID: 60501265892922670}
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
+  damage: 5
+  n: 10
+  theta: 0
+  length: 1
+  attackButton: 323
 --- !u!114 &114750543294361782
 MonoBehaviour:
   m_ObjectHideFlags: 1
