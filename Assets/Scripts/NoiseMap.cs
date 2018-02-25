@@ -8,7 +8,7 @@ public class NoiseMap : MonoBehaviour {
     public float o3 = .25f;
     public float o4 = .1f;
     public float o5 = 1f;
-    public float power = 3;
+    public float power = 1.1;
     private float seed1;
     private List<GameObject> map;
 
