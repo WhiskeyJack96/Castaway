@@ -108,7 +108,6 @@ public class MobSpawn : MonoBehaviour {
 	//	float spawnx = x * multpx;
 	//	float spawny =  y * multpy;
 		v3Pos = new Vector3(spawnx, spawny, 10);
-		print(v3Pos);
 		v3Pos = Camera.main.ViewportToWorldPoint(v3Pos);
 		//Use random to add or sub a small number to edge of camera
 	}

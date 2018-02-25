@@ -20,8 +20,6 @@ public class RangedAttack : MonoBehaviour {
 		if (Input.GetMouseButton (1) && canshoot) { //Right Mouse Button to shoot
 			if (ammo > 0) {
 				GameObject Iarrow;
-				Iarrow = Instantiate (arrow, transform.position + new Vector3 (0, 0, 0), new Quaternion (0, 0, 0, 0));
-				rb = Iarrow.GetComponent<Rigidbody2D> ();
 				Vector3 mouse = Input.mousePosition;
 				mouse.z = 10;
 				mouse = Camera.main.ScreenToWorldPoint (mouse);
@@ -30,7 +28,11 @@ public class RangedAttack : MonoBehaviour {
 				float y = mouse.y - player.y;
 				Vector3 vel = new Vector3 (x, y, 0);
 				vel =arrowSpeed * vel.normalized;
+				float angle = Mathf.Atan2(y,x) * Mathf.Rad2Deg;
+				Iarrow = Instantiate (arrow, transform.position + vel.normalized*0.25f, new Quaternion (0, 0, 0, 0));
+				rb = Iarrow.GetComponent<Rigidbody2D> ();
 				rb.velocity = vel;
+       			Iarrow.transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);
 				StartCoroutine (cooldown (time));
 				ammo = ammo - 1;
 			}
