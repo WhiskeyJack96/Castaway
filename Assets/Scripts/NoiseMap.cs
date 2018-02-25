@@ -23,6 +23,7 @@ public class NoiseMap : MonoBehaviour {
     private float listx = 50;
     List<int> locations;
 
+    private float seed3;
 
 	// Use this for initialization
 	void Start () {
@@ -30,7 +31,7 @@ public class NoiseMap : MonoBehaviour {
         locations = new List<int>();
         seed1 =Random.Range(1,10000);
         seed2 =Random.Range(1,10000);
-
+        seed3 =Random.Range(1,10000);
         //print(grass.GetComponent<Collider2D>().bounds);
 
 
@@ -66,8 +67,59 @@ public class NoiseMap : MonoBehaviour {
             }
         }
         convertToMap();
+        addStructure();
     }
 	
+    private void addStructure()
+    {
+        List<float> trees = new List<float>();
+        for(int i = 0; i <listx; i++)
+        {
+            for(int j = 0; j <listy; j++)
+            {
+                float treepoint = (o5*Mathf.PerlinNoise(seed3 + (i/listx - .5f),seed3 + (j/listy - .5f))+
+                                o1*Mathf.PerlinNoise(seed3 + (32*i/listx - .5f),seed3 + (32*j/listy - .5f))+
+                                o2*Mathf.PerlinNoise(seed3 + (64*i/listx - .5f),seed3 + (64*j/listy - .5f))+
+                                o3*Mathf.PerlinNoise(seed3 + (8*i/listx - .5f),seed3 + (8*j/listy - .5f))+
+                                o4*Mathf.PerlinNoise(seed3 + (16*i/listx - .5f),seed3 + (16*j/listy - .5f))
+                    );
+
+                treepoint /= 2f;
+                treepoint =Mathf.Pow(treepoint, power);
+                trees.Add(treepoint);
+
+            }               //locations.Add(heightpoint);
+        }
+        int R = 2;
+        for(int xc = 0; xc <listx; xc++)
+        {
+            for(int yc = 0; yc <listy; yc++)
+            {
+                float max = 0;
+                for(int  xl= xc-R; xl <=xc+R; xl++)
+                {
+                    for(int yl = yc-R; yl <= yc+R; yl++)
+                    {
+                        if(xl >=0 && xl <listx && yl >=0 && yl < listy)
+                        {                        
+                            float temp = trees[xl + (yl * (int)listy)];
+                            if(temp> max)
+                            {
+                                max = temp;
+                            }
+                        }
+                    }
+                }
+                if(trees[xc + (yc * (int)listy)] >= max)
+                {
+                    map[xc + (yc * (int)listy)].GetComponent<SpawnTerrain>().spawn();
+                }
+            }
+        }
+
+    }
+
+
     private void convertToMap()
     {
         int num = 0;
@@ -77,7 +129,7 @@ public class NoiseMap : MonoBehaviour {
         {
             for(int j = 0; j <listy; j++)
             {
-                print(nextcoord);
+                //print(nextcoord);
                 switch(locations[i + (j*(int)listy)])
                 {
                     case 0:
