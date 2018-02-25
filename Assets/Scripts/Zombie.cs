@@ -18,6 +18,7 @@ public class Zombie : MonoBehaviour {
 		Player = GameObject.Find("Player");
 		health = GetComponent<EnemyHealth>();
 		health.setHealth(zhealth);
+        
 	}
 	
 	// Update is called once per frame

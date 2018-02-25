@@ -25,6 +25,7 @@ GameObject:
   - component: {fileID: 114284081824672830}
   - component: {fileID: 114181509814072852}
   - component: {fileID: 58707570462293828}
+  - component: {fileID: 114152670137869784}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -96,6 +97,18 @@ MonoBehaviour:
   movespeed: 1
   Player: {fileID: 0}
   shootingdistance: 1000
+--- !u!114 &114152670137869784
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944954517620204}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87eb7054b161f7e43899efff088afd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &114181509814072852
 MonoBehaviour:
   m_ObjectHideFlags: 1

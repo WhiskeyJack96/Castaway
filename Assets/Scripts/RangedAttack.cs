@@ -37,7 +37,7 @@ public class RangedAttack : MonoBehaviour {
 		}
 	}
 	public void addammo(int amount){
-		ammo = ammo + 1;
+		ammo = ammo + amount;
 	}
 	IEnumerator cooldown(int time){
 		canshoot = false;
