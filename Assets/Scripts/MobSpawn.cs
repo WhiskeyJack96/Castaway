@@ -10,14 +10,43 @@ public class MobSpawn : MonoBehaviour {
 	public GameObject IZombie;
 	public GameObject ISkele;
 	public GameObject IBoar;
+	public float delta = 40f;
+	private Vector3 v3Pos;
+	private float spawnx;
+	private float spawny;
 	// Use this for initialization
 	void Start () {
 		
 	}
 	
 	// Update is called once per frame
-	void Update () {
+	void FixedUpdate () {
+		varpos();
+		//print(v3Pos);
 		spawn();
+	}
+
+
+	void varpos()
+	{
+		int multpx = Random.Range(0,2);  // Returns either 0 or 1
+		int multpy = Random.Range(0,2);
+		float y = Random.Range(1,11)/10f;         // Returns a normalized random number to be added to a small number
+		float x = Random.Range(1,11)/10f;
+		if (multpx == 0)
+			spawnx = -x;
+		else
+			spawnx = 1 + x;
+		if (multpy ==0)
+			spawny =  -y;
+		else
+			spawny = 1 + y;
+
+	//	float spawnx = x * multpx;
+	//	float spawny =  y * multpy;
+		v3Pos = new Vector3(spawnx, spawny, 10);
+		v3Pos = Camera.main.ViewportToWorldPoint(v3Pos);
+		//Use random to add or sub a small number to edge of camera
 	}
 
 
@@ -25,6 +54,7 @@ public class MobSpawn : MonoBehaviour {
 	{
 		if (able && GameObject.FindGameObjectsWithTag("Enemy").Length < enemies)
 		{
+
     		chooser();
     		able = false;
     	}
@@ -55,20 +85,20 @@ public class MobSpawn : MonoBehaviour {
 
 	void zspawn()  //Creates a Zombie ideally slightly off screen)
 	{
-		Instantiate(IZombie, new Vector3 (0,0,0), new Quaternion(0,0,0,0));
+		Instantiate(IZombie, v3Pos, new Quaternion(0,0,0,0));
 		return;
 	}
 
 
 	void sspawn() //Creates a Skeleton ideally slightly off screen)
 	{
-		Instantiate(ISkele, new Vector3(0,0,0), new Quaternion(0,0,0,0));
+		Instantiate(ISkele, v3Pos, new Quaternion(0,0,0,0));
 		return;
 	}
 
 	void bspawn()  //Creates a Boar ideally slightly off screen)
 	{
-		Instantiate(IBoar, new Vector3(0,0,0), new Quaternion(0,0,0,0));
+		Instantiate(IBoar, v3Pos, new Quaternion(0,0,0,0));
 		return;
 	}
 
