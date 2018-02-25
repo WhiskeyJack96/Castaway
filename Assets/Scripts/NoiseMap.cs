@@ -163,10 +163,10 @@ public class NoiseMap : MonoBehaviour {
                     break;
                     }
                 }
-                nextcoord= new Vector3(nextcoord.x + .25f, nextcoord.y, nextcoord.z);
+                nextcoord= new Vector3(nextcoord.x + .32f, nextcoord.y, nextcoord.z);
                 if ((num % listy) == 0)
                 {
-                    nextcoord= new Vector3(0 , nextcoord.y+.25f, nextcoord.z);
+                    nextcoord= new Vector3(0 , nextcoord.y+.32f, nextcoord.z);
                 }
             }
         }
