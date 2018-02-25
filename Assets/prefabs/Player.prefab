@@ -24,6 +24,7 @@ GameObject:
   - component: {fileID: 212504511104805770}
   - component: {fileID: 114559314822357206}
   - component: {fileID: 58889555573565600}
+  - component: {fileID: 114900806898750948}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -91,6 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   movespeed: 2
+  isrolling: 0
 --- !u!114 &114559314822357206
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -105,6 +107,20 @@ MonoBehaviour:
   maxHealth: 100
   currentHealth: 100
   healthSlider: {fileID: 0}
+--- !u!114 &114900806898750948
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1770328706613274}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b83b1270a4a52ba449b8d84054f345c1, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  cdtime: 1
+  itime: 0.5
+  isrolling: 0
 --- !u!212 &212504511104805770
 SpriteRenderer:
   m_ObjectHideFlags: 1
