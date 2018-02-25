@@ -26,6 +26,7 @@ GameObject:
   - component: {fileID: 114181509814072852}
   - component: {fileID: 58707570462293828}
   - component: {fileID: 114152670137869784}
+  - component: {fileID: 95743044307395508}
   m_Layer: 0
   m_Name: Skeleton
   m_TagString: Enemy
@@ -81,6 +82,23 @@ CircleCollider2D:
   m_Offset: {x: 0, y: 0}
   serializedVersion: 2
   m_Radius: 0.1
+--- !u!95 &95743044307395508
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1944954517620204}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d7668ff6ea3d0d649a6b65db73131ebf, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!114 &114090406379220452
 MonoBehaviour:
   m_ObjectHideFlags: 1
