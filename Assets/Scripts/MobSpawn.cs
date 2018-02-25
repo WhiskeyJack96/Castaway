@@ -81,23 +81,25 @@ public class MobSpawn : MonoBehaviour {
 	
 	// Update is called once per frame
 	void FixedUpdate () {
+		varpos();
 		if (able)
-		{varpos();
+		{
 		//print(v3Pos);
 		spawn();
 		}
+
 	}
 
 	void varpos()
 	{
 		int multpx = Random.Range(0,2);  // Returns either 0 or 1
 		int multpy = Random.Range(0,2);
-		float y = Random.Range(1,11)/10f;         // Returns a normalized random number to be added to a small number
-		float x = Random.Range(1,11)/10f;
+		float y = Random.Range(1f,10f)/10f;         // Returns a normalized random number for a weight
+		float x = Random.Range(1f,10f)/10f;
 		if (multpx == 0)
 			spawnx = -x;
 		else
-			spawnx = 1 + x;
+			spawnx = 1-x;
 		if (multpy ==0)
 			spawny =  -y;
 		else
@@ -106,6 +108,7 @@ public class MobSpawn : MonoBehaviour {
 	//	float spawnx = x * multpx;
 	//	float spawny =  y * multpy;
 		v3Pos = new Vector3(spawnx, spawny, 10);
+		print(v3Pos);
 		v3Pos = Camera.main.ViewportToWorldPoint(v3Pos);
 		//Use random to add or sub a small number to edge of camera
 	}
