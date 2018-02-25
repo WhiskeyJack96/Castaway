@@ -118,12 +118,12 @@ MonoBehaviour:
   chargespeed: 3
   chargedamage: 15
   waittime: 1
-  chargeduration: 1
+  chargeduration: 3
   cooldown: 1
   bhealth: 15
   movespeed: 6
   Player: {fileID: 1443169951816220, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
-  shootingdistance: 64
+  shootingdistance: 4
 --- !u!212 &212515629337111480
 SpriteRenderer:
   m_ObjectHideFlags: 1

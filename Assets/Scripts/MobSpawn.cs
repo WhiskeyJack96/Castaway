@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class MobSpawn : MonoBehaviour {
-
+	//private Gamobj player;
+	//gamobj.find(Player)
 	public int timedelay = 4;
 	public int enemies = 10;
 	private bool able = true;
@@ -14,8 +15,10 @@ public class MobSpawn : MonoBehaviour {
 	private Vector3 v3Pos;
 	private float spawnx;
 	private float spawny;
+	private GameObject Player;
 	// Use this for initialization
 	void Start () {
+		Player = GameObject.Find("Player");
 		//might be -transform.forward and needs mask configured and hit.collider is a thing
 		//RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward,length,mask);
 		//if(hit)
@@ -88,22 +91,32 @@ public class MobSpawn : MonoBehaviour {
 		}
 	}
 
+
+	void pointer()
+	{
+
+	}
+
+
 	void zspawn()  //Creates a Zombie ideally slightly off screen)
 	{
-		Instantiate(IZombie, v3Pos, new Quaternion(0,0,0,0));
+		GameObject z = Instantiate(IZombie, v3Pos, new Quaternion(0,0,0,0));
+		z.GetComponent<Zombie>().Player = Player;
 		return;
 	}
 
 
 	void sspawn() //Creates a Skeleton ideally slightly off screen)
 	{
-		Instantiate(ISkele, v3Pos, new Quaternion(0,0,0,0));
+		GameObject s = Instantiate(ISkele, v3Pos, new Quaternion(0,0,0,0));
+		s.GetComponent<Skeleton>().Player = Player;
 		return;
 	}
 
 	void bspawn()  //Creates a Boar ideally slightly off screen)
 	{
-		Instantiate(IBoar, v3Pos, new Quaternion(0,0,0,0));
+		GameObject b = Instantiate(IBoar, v3Pos, new Quaternion(0,0,0,0));
+		b.GetComponent<Boar>().Player = Player;
 		return;
 	}
 

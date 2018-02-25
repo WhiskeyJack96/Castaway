@@ -16,7 +16,7 @@ public class Boar : MonoBehaviour {
 	private float playerx = 0f;
 	private float playery = 0f;
 	private Rigidbody2D rig;
-	public float shootingdistance = 64f;
+	public float shootingdistance = 16f;
 	private Vector3 movement;
 	private Vector3 oldpos;
 	private bool charging = false;
@@ -25,9 +25,11 @@ public class Boar : MonoBehaviour {
 	// Use this for initialization
 	void Start() {
 		rig =  GetComponent<Rigidbody2D>();
-		float thealth = bhealth * (Random.Range(1,2)/2f + .25f);
+		float mod = (Random.Range(1,2)/2f + .25f);
+		float thealth = bhealth * mod;
 		health = GetComponent<EnemyHealth>();
 		health.setHealth(thealth);
+		transform.localScale = new Vector3 (transform.localScale.x * mod, transform.localScale.y * mod, transform.localScale.z);
 	}
 	
 	// Update is called once per frame

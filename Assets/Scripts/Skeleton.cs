@@ -11,7 +11,7 @@ public class Skeleton : MonoBehaviour {
 	private float playerx = 0f;
 	private float playery = 0f;
 	private Rigidbody2D rig;
-	public float shootingdistance = 1600f;
+	public float shootingdistance = 16f;
 	private Vector3 movement;
 
 	// Use this for initialization
@@ -20,6 +20,7 @@ public class Skeleton : MonoBehaviour {
 		float thealth = shealth * (Random.Range(1,2)/2f + .25f);
 		health = GetComponent<EnemyHealth>();
 		health.setHealth(thealth);
+		//Player = GetComponent<>();
 	}
 	
 	// Update is called once per frame

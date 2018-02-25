@@ -40,7 +40,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1944954517620204}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -12.96, y: 0.2, z: 0}
+  m_LocalPosition: {x: 0.71256137, y: 1.6736916, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -96,7 +96,7 @@ MonoBehaviour:
   shealth: 15
   movespeed: 1
   Player: {fileID: 1770328706613274, guid: 8410ac2f72247cf4286792bfb6eb8514, type: 2}
-  shootingdistance: 1000
+  shootingdistance: 4
 --- !u!114 &114152670137869784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -121,7 +121,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arrow: {fileID: 1531712082079356, guid: 031a2fbd5a577964c839bc2f376e69d6, type: 2}
-  arrowSpeed: 55
+  arrowSpeed: 5
   Player: {fileID: 1443169951816220, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
   range: 0
 --- !u!114 &114284081824672830
