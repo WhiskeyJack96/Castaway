@@ -24,7 +24,7 @@ public class hopefullyhealthbar : MonoBehaviour {
         currentHealth -= amount;
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
-        healthSlider.updateSlider(currentHealth);
+        //healthSlider.updateSlider(currentHealth);
         if(currentHealth <= 0 && !isDead)
         {
             Death();
