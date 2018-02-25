@@ -5,7 +5,7 @@ using UnityEngine;
 public class RangedAttack : MonoBehaviour {
 
 	public GameObject arrow;
-	public float arrowSpeed;
+	public float arrowSpeed = 10;
 	private Rigidbody2D rb;
 	private bool canshoot = true;
 	int time = 1;
@@ -29,7 +29,7 @@ public class RangedAttack : MonoBehaviour {
 				float x = mouse.x - player.x;
 				float y = mouse.y - player.y;
 				Vector3 vel = new Vector3 (x, y, 0);
-				vel = vel / vel.magnitude;
+				vel =arrowSpeed * vel.normalized;
 				rb.velocity = vel;
 				StartCoroutine (cooldown (time));
 				ammo = ammo - 1;
