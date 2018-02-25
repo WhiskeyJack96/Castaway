@@ -27,7 +27,18 @@ public class Zombie : MonoBehaviour {
 		playerx = Player.transform.position.x;
 		playery = Player.transform.position.y;
 		// new Vector3 distance
+		face();
 		move();
+	}
+
+	void face()
+	{
+		Vector3 player = Player.transform.position;
+		Vector3 mob = transform.position;
+		float x = player.x - mob.x;
+		float y = player.y - mob.y;
+		float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
+        transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);			
 	}
 
 	//void AttemptMove() 
