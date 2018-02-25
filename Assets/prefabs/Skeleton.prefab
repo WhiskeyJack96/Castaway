@@ -122,7 +122,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   arrow: {fileID: 1531712082079356, guid: 031a2fbd5a577964c839bc2f376e69d6, type: 2}
   arrowSpeed: 55
-  Player: {fileID: 0}
+  Player: {fileID: 1443169951816220, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
   range: 0
 --- !u!114 &114284081824672830
 MonoBehaviour:
