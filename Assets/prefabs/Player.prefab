@@ -44,6 +44,7 @@ GameObject:
   - component: {fileID: 114200884391520012}
   - component: {fileID: 114442280309924066}
   - component: {fileID: 114561552203957866}
+  - component: {fileID: 114814159299193334}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -266,6 +267,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   movespeed: 2
   isrolling: 0
+--- !u!114 &114814159299193334
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443169951816220}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ed0dfc8e2273cde45be66345d9e9b5a3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  arrow: {fileID: 0}
+  arrowSpeed: 10
+  ammo: 5
 --- !u!212 &212525227150240372
 SpriteRenderer:
   m_ObjectHideFlags: 1
