@@ -38,7 +38,7 @@ public class Zombie : MonoBehaviour {
 		float x = player.x - mob.x;
 		float y = player.y - mob.y;
 		float angle = Mathf.Atan2(y, x) * Mathf.Rad2Deg;
-        transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);			
+        transform.rotation = Quaternion.AngleAxis(angle -270, Vector3.forward);			
 	}
 
 	//void AttemptMove() 
