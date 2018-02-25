@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Shield
+  - Resource
   layers:
   - Default
   - TransparentFX
