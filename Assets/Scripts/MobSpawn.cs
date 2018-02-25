@@ -16,7 +16,12 @@ public class MobSpawn : MonoBehaviour {
 	private float spawny;
 	// Use this for initialization
 	void Start () {
-		
+		//might be -transform.forward and needs mask configured and hit.collider is a thing
+		//RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward,length,mask);
+		//if(hit)
+		//{
+			//do something
+		//}
 	}
 	
 	// Update is called once per frame
