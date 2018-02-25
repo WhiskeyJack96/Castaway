@@ -13,6 +13,9 @@ public class Skeleton : MonoBehaviour {
 	private Rigidbody2D rig;
 	public float shootingdistance = 16f;
 	private Vector3 movement;
+	public float healthmod; //Set by Biome in Mobspawn to increase health and range
+	public float rangemod;
+
 
 	// Use this for initialization
 	void Start () {

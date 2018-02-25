@@ -21,6 +21,8 @@ public class Boar : MonoBehaviour {
 	private Vector3 oldpos;
 	private bool charging = false;
 	private EnemyHealth health;
+	public float chargemod;      // Set by Biome in Monster Spawn and used to increase move speed during charge and decrease wait time on charge
+	public float waitmod; 		 // 0 < chargemod < 2     0 < waitmod < 2
 
 	// Use this for initialization
 	void Start() {

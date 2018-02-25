@@ -11,6 +11,8 @@ public class Zombie : MonoBehaviour {
 	private float playerx = 0f;
 	private float playery = 0f;
 	private Rigidbody2D rig;
+	public float movemod;        // Set by Biome in Mob Spawn and used to increase movespeed and health
+ 	public float healthmod;
 
 	// Use this for initialization
 	void Start () {

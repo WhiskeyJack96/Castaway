@@ -16,6 +16,12 @@ public class MobSpawn : MonoBehaviour {
 	private float spawnx;
 	private float spawny;
 	private GameObject Player;
+	private float chargemod;
+	private float waitmod;
+	private float shealthmod;
+	private float rangemod;
+	private float zhealthmod;
+	private float movemod;
 	// Use this for initialization
 	void Start () {
 		Player = GameObject.Find("Player");
@@ -25,15 +31,62 @@ public class MobSpawn : MonoBehaviour {
 		//{
 			//do something
 		//}
+		/*if (hit.collider.gameObject.tag == "Grassy")
+		{
+			chargemod  = 1f;
+			waitmod = 1f;
+			shealthmod = 0.75f;
+			rangemod = 0.5f;
+			zhealthmod = 1f;
+			movemod = 1f;
+		}
+		else if (hit.collider.gameObject.tag == "Sand")
+		{
+			chargemod  = 1.5f;
+			waitmod = 0.5f;
+			shealthmod = 1f;
+			rangemod = 1f;
+			zhealthmod = 1f;
+			movemod = 1f;
+		}
+		else if (hit.collider.gameObject.tag == "Mountain")
+		{
+			chargemod  = 0.5f;
+			waitmod = 1.5;
+			shealthmod = 2f;
+			rangemod = 2f;
+			zhealthmod = 1.5f ;
+			movemod = 1f;
+		}
+		else if (hit.collider.gameObject.tag == "Bad Sand")
+		{
+			chargemod  = 2f;
+			waitmod = 0.25f;
+			shealthmod = 1f;
+			rangemod = 1f;
+			zhealthmod = 1.5f;
+			movemod = 0.75f;
+		}
+		else if (hit.collider.gameObject.tag == "Ice")
+		{
+			chargemod  = 0.5f;
+			waitmod = 2f;
+			shealthmod = 1.5f;
+			rangemod = 1f;
+			zhealthmod = 5f;
+			movemod = 2f;
+		}
+		*/
 	}
 	
 	// Update is called once per frame
 	void FixedUpdate () {
-		varpos();
+		if (able)
+		{varpos();
 		//print(v3Pos);
 		spawn();
+		}
 	}
-
 
 	void varpos()
 	{
