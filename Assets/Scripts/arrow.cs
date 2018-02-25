@@ -32,5 +32,9 @@ public class arrow : MonoBehaviour {
 			Destroy(this.gameObject);
 			return;
 		}
+		if (collider.gameObject.tag == "Shield") {
+			collider.gameObject.GetComponent<ShieldHealth> ().updateHealth (arrowdamage);
+			Destroy (this.gameObject);
+		}
 	}
 }
