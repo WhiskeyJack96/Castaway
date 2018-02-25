@@ -5,8 +5,8 @@ using UnityEngine.UI;
 
 public class hopefullyhealthbar : MonoBehaviour {
 
-    public int maxHealth = 100;
-    public int currentHealth;
+    public float maxHealth = 100;
+    public float currentHealth;
     public sliding healthSlider;
 
     bool isDead = false;
@@ -17,7 +17,7 @@ public class hopefullyhealthbar : MonoBehaviour {
         currentHealth = maxHealth;
     }
 
-    public void TakeDamage (int amount)
+    public void TakeDamage (float amount)
     {
         damaged = true;
         print("ouch");

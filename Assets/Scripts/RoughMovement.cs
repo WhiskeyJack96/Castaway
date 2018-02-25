@@ -28,6 +28,10 @@ public class RoughMovement : MonoBehaviour {
 
 	void face()
 	{
+		if(isrolling)
+		{
+			return;
+		}
 		Vector3 mouse = Input.mousePosition;
 		mouse.z = 10;
 		mouse = Camera.main.ScreenToWorldPoint (mouse);

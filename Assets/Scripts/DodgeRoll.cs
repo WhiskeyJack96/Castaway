@@ -39,6 +39,7 @@ public class DodgeRoll: MonoBehaviour {
 			player.GetComponent<Rigidbody2D>().velocity = Rollvec;
 			//print (Rollvec);
 			StartCoroutine (iframes (itime, rb));
+			//StartCoroutine(rotate(itime));
 			StartCoroutine (cooldown (cdtime));
 		}
 	}
@@ -55,5 +56,17 @@ public class DodgeRoll: MonoBehaviour {
 		player.GetComponent<Collider2D>().enabled = true;
 
 	}
-
+	/*IEnumerator rotate(float itime)
+	{
+		float time = itime;
+		float stepsize = 180/itime;
+		//if z %90 ==0
+		while (time >0 && stepsize < 180)
+		{
+			transform.Rotate(Vector3.up);
+			stepsize+= stepsize;
+			time-=Time.deltaTime;
+		}
+		yield return new WaitForSeconds(0);
+	}*/
 }

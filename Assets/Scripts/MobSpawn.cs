@@ -157,7 +157,7 @@ public class MobSpawn : MonoBehaviour {
 	void zspawn()  //Creates a Zombie ideally slightly off screen)
 	{
 		GameObject z = Instantiate(IZombie, v3Pos, new Quaternion(0,0,0,0));
-		z.GetComponent<Zombie>().Player = Player;
+		z.GetComponent<Zombie>().Play = Player;
 		return;
 	}
 
@@ -165,14 +165,14 @@ public class MobSpawn : MonoBehaviour {
 	void sspawn() //Creates a Skeleton ideally slightly off screen)
 	{
 		GameObject s = Instantiate(ISkele, v3Pos, new Quaternion(0,0,0,0));
-		s.GetComponent<Skeleton>().Player = Player;
+		s.GetComponent<Skeleton>().Play = Player;
 		return;
 	}
 
 	void bspawn()  //Creates a Boar ideally slightly off screen)
 	{
 		GameObject b = Instantiate(IBoar, v3Pos, new Quaternion(0,0,0,0));
-		b.GetComponent<Boar>().Player = Player;
+		b.GetComponent<Boar>().Play = Player;
 		return;
 	}
 
