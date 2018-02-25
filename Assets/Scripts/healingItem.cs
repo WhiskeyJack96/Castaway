@@ -12,6 +12,11 @@ public class healingItem : MonoBehaviour {
             collider.gameObject.GetComponent<hopefullyhealthbar>().TakeDamage(healAmount);
             Destroy(this.gameObject);
         }
+        if (collider.gameObject.tag == "Enemy")
+        {
+            collider.gameObject.GetComponent<EnemyHealth>().updateHealth(healAmount);
+            Destroy(this.gameObject);
+        }
         
     }
 
