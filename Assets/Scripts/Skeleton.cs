@@ -17,8 +17,9 @@ public class Skeleton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
+		float thealth = shealth * (Random.Range(1,2)/2f + .25f);
 		health = GetComponent<EnemyHealth>();
-		health.setHealth(shealth);
+		health.setHealth(thealth);
 	}
 	
 	// Update is called once per frame

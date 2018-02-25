@@ -15,8 +15,9 @@ public class Zombie : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
+		float thealth = zhealth * (Random.Range(1,2)/2f + .25f);  
 		health = GetComponent<EnemyHealth>();
-		health.setHealth(zhealth);
+		health.setHealth(thealth);
         
 	}
 	
