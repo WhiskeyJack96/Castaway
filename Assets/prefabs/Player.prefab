@@ -64,7 +64,7 @@ GameObject:
   - component: {fileID: 70653479055502298}
   m_Layer: 0
   m_Name: Shield
-  m_TagString: Untagged
+  m_TagString: Shield
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -232,7 +232,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: -345
+  currentHealth: -1065
   healthSlider: {fileID: 0}
 --- !u!114 &114561552203957866
 MonoBehaviour:
