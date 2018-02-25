@@ -5,11 +5,16 @@ using UnityEngine;
 public class healingItem : MonoBehaviour {
     public int healAmount = -15;
 
-    public void OnCollisionEnter2D(Collision2D collider)
+    public void OnTriggerEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player")
         {
             collider.gameObject.GetComponent<hopefullyhealthbar>().TakeDamage(healAmount);
+            Destroy(this.gameObject);
+        }
+        if (collider.gameObject.tag == "Enemy")
+        {
+            collider.gameObject.GetComponent<EnemyHealth>().updateHealth(healAmount);
             Destroy(this.gameObject);
         }
         

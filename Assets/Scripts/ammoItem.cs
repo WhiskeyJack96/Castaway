@@ -5,7 +5,7 @@ using UnityEngine;
 public class ammoItem : MonoBehaviour {
     public int ammoAmount = 5;
 
-    public void OnCollisionEnter2D(Collision2D collider)
+    public void OnTriggerEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player")
             collider.gameObject.GetComponent<RangedAttack>().addammo(ammoAmount);
