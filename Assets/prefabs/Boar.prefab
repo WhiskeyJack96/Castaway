@@ -132,16 +132,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0bb13a02b391d364083edb7112732b6f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
   chargespeed: 3
   chargedamage: 15
   waittime: 1
-  chargeduration: 3
+  chargeduration: 2
   cooldown: 1
-  bhealth: 15
-  movespeed: 6
-  Player: {fileID: 1443169951816220, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
-  shootingdistance: 4
+  chargemod: 0
+  waitmod: 0
+  Play: {fileID: 0}
 --- !u!212 &212515629337111480
 SpriteRenderer:
   m_ObjectHideFlags: 1
