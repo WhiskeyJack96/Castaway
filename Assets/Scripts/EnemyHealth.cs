@@ -14,10 +14,11 @@ public class EnemyHealth : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         if (health <= 0)
+        {
             GetComponent<dropItems>().ChooseItem();
 			Destroy(this.gameObject);
 			return;
-
+        }
 	}
 
     public void setHealth(int change)

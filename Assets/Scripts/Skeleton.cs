@@ -17,7 +17,6 @@ public class Skeleton : MonoBehaviour {
 	// Use this for initialization
 	void Start () {
 		rig =  GetComponent<Rigidbody2D>();
-		Player = GameObject.Find("Player");
 		health = GetComponent<EnemyHealth>();
 		health.setHealth(shealth);
 	}

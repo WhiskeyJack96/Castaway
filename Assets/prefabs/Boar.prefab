@@ -122,7 +122,7 @@ MonoBehaviour:
   cooldown: 1
   bhealth: 15
   movespeed: 4
-  Player: {fileID: 0}
+  Player: {fileID: 1770328706613274, guid: 8410ac2f72247cf4286792bfb6eb8514, type: 2}
   shootingdistance: 64
 --- !u!212 &212515629337111480
 SpriteRenderer:

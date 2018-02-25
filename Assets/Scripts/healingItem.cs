@@ -8,8 +8,11 @@ public class healingItem : MonoBehaviour {
     public void OnCollisionEnter2D(Collision2D collider)
     {
         if (collider.gameObject.tag == "Player")
+        {
             collider.gameObject.GetComponent<hopefullyhealthbar>().TakeDamage(healAmount);
-        Destroy(this.gameObject);
+            Destroy(this.gameObject);
+        }
+        
     }
 
     // Use this for initialization

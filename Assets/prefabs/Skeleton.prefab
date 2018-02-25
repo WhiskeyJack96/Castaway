@@ -95,7 +95,7 @@ MonoBehaviour:
   damage: 20
   shealth: 15
   movespeed: 1
-  Player: {fileID: 0}
+  Player: {fileID: 1770328706613274, guid: 8410ac2f72247cf4286792bfb6eb8514, type: 2}
   shootingdistance: 1000
 --- !u!114 &114152670137869784
 MonoBehaviour:
