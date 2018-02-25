@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4004684675640818}
   - component: {fileID: 212255104051550180}
   m_Layer: 0
-  m_Name: attackRanged2
+  m_Name: Shield
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
