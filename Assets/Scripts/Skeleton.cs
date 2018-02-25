@@ -36,7 +36,7 @@ public class Skeleton : BaseEnemy {
 			GetComponent<EnemyRangedAttack>().inrange(false);
 	}
 
-	override void scaleBiome(string biome)
+	protected override void scaleBiome(string biome)
     {
         return;
     }

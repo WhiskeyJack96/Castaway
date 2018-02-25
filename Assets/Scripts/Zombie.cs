@@ -24,7 +24,7 @@ public class Zombie : BaseEnemy {
 		face();
 	}
 
-	override void scaleBiome(string biome)
+	protected override void scaleBiome(string biome)
     {
         return;
     }

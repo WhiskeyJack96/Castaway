@@ -76,8 +76,8 @@ public class Boar : BaseEnemy {
 		yield return new WaitForSeconds(time);
 		charging = false;
 	}
-	
-	override void scaleBiome(string biome)
+
+	protected override void scaleBiome(string biome)
     {
         return;
     }
