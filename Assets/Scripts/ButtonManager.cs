@@ -5,12 +5,12 @@ using UnityEngine.SceneManagement;
 public class ButtonManager : MonoBehaviour {
 	 
 	void Start(){
-		int ds = PlayerPrefs.GetInt ("DifficultySetting");
+		//int ds = PlayerPrefs.GetInt ("DifficultySetting");
 
 	}
 	public void NewGameBtn (string NewGame)
 	{ 
-		SceneManager.LoadScene ("JakesScene");
+		SceneManager.LoadScene (NewGame);
 
 	}
 	public void ExitGameBtn ()

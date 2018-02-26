@@ -9,12 +9,13 @@ public class hopefullyhealthbar : MonoBehaviour {
     public float currentHealth;
     public Slider healthSlider;
 
+    public GameObject DS;
     public AudioClip damageTaken;
     public AudioClip playerDead;
     public AudioClip gameStart;
 
     public bool isDead = false;
-    bool damaged;
+    //bool damaged;
 
     void Awake()
     {
@@ -24,14 +25,14 @@ public class hopefullyhealthbar : MonoBehaviour {
 
     public void TakeDamage (float amount)
     {
-        damaged = true;
+        //damaged = true;
         currentHealth -= amount;
         if (amount > 0)
             SoundManager.instance.RandomizeSfx(damageTaken);
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
         healthSlider.value = ((int)currentHealth);
-        if(currentHealth <= 0 && !isDead)
+        if(currentHealth <= 0)
         {
             Death();
         }
@@ -42,6 +43,8 @@ public class hopefullyhealthbar : MonoBehaviour {
         SoundManager.instance.PlaySingle(playerDead);
         isDead = true;
         GameObject.Find("GameController").GetComponent<Timer>().death = true;
+        DS.SetActive(true);
+        GameObject.Find("Everything").SetActive(false);
         Destroy(gameObject);
         SoundManager.instance.musicSource.Stop();
     }

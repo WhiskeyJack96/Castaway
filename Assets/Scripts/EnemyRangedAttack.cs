@@ -12,7 +12,7 @@ public class EnemyRangedAttack : MonoBehaviour {
 	int time = 4;
 	public GameObject Player;
 	public bool range;
-	private Vector3 movespeed;
+	//private Vector3 movespeed;
 
 	// Use this for initialization
 	void Start () {
@@ -53,7 +53,7 @@ public class EnemyRangedAttack : MonoBehaviour {
 		if (canshoot && range) //Makes an arrow, launches arrow at player's current location, can optimize with multiplication
 		{
 			GameObject Iarrow;
-			movespeed = Player.GetComponent<Rigidbody2D>().velocity;
+			//movespeed = Player.GetComponent<Rigidbody2D>().velocity;
 			Vector3 toplayer = Player.transform.position - transform.position;
 			float angle = Mathf.Atan2(toplayer.y, toplayer.x) * Mathf.Rad2Deg;
 			Iarrow = Instantiate (arrow, transform.position + toplayer.normalized*0.25f, new Quaternion(0,0,0,0));

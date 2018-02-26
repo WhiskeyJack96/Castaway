@@ -5,7 +5,7 @@ using UnityEngine;
 public class Timer : MonoBehaviour {
 
 public int scorenum;
-private int totalscore;
+//private int totalscore;
 public bool death = false;
 private int GameSeconds;
 public int mobshift = 5;
@@ -14,7 +14,7 @@ public int mobshift = 5;
 	// Use this for initialization
 	void Start () {
 		scorenum = 0;
-		totalscore = 0;
+		//totalscore = 0;
 		InvokeRepeating("timer", 0f, 1.0f);
 	}
 	
