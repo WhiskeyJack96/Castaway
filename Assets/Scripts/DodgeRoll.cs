@@ -7,6 +7,7 @@ public class DodgeRoll: MonoBehaviour {
 	public int cdtime = 1;
 	public float itime  = .1f;
 	private GameObject player;
+	public GameObject Shield;
 	float rollspeed;
 	private bool canroll = true;
 	public bool isrolling = false;
@@ -23,6 +24,7 @@ public class DodgeRoll: MonoBehaviour {
 		if (Input.GetKeyDown (KeyCode.Space) && canroll)
 		{
 			player.GetComponent<Collider2D>().enabled = false;
+			Shield.GetComponent<Collider2D> ().enabled = false;
 			player.GetComponent<RoughMovement>().isrolling = true;
 			Vector3 mouse = Input.mousePosition;
 			mouse.z = 10;
@@ -39,7 +41,6 @@ public class DodgeRoll: MonoBehaviour {
 			player.GetComponent<Rigidbody2D>().velocity = Rollvec;
 			//print (Rollvec);
 			StartCoroutine (iframes (itime, rb));
-			//StartCoroutine(rotate(itime));
 			StartCoroutine (cooldown (cdtime));
 		}
 	}
@@ -54,19 +55,8 @@ public class DodgeRoll: MonoBehaviour {
 		player.GetComponent<Rigidbody2D> ().velocity = old;
 		player.GetComponent<RoughMovement>().isrolling = false;
 		player.GetComponent<Collider2D>().enabled = true;
+		Shield.GetComponent<Collider2D> ().enabled = true;
 
 	}
-	/*IEnumerator rotate(float itime)
-	{
-		float time = itime;
-		float stepsize = 180/itime;
-		//if z %90 ==0
-		while (time >0 && stepsize < 180)
-		{
-			transform.Rotate(Vector3.up);
-			stepsize+= stepsize;
-			time-=Time.deltaTime;
-		}
-		yield return new WaitForSeconds(0);
-	}*/
+
 }
