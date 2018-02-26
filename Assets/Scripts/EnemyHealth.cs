@@ -17,6 +17,7 @@ public class EnemyHealth : MonoBehaviour {
         if (health <= 0)
         {
             GetComponent<dropItems>().ChooseItem();
+            GetComponent<ScoreController>().enemies();
 			Destroy(this.gameObject);
 			return;
         }
