@@ -11,6 +11,7 @@ public class hopefullyhealthbar : MonoBehaviour {
 
     public AudioClip damageTaken;
     public AudioClip playerDead;
+    public AudioClip gameStart;
 
     public bool isDead = false;
     bool damaged;
@@ -18,6 +19,7 @@ public class hopefullyhealthbar : MonoBehaviour {
     void Awake()
     {
         currentHealth = maxHealth;
+        SoundManager.instance.PlaySingle(gameStart);
     }
 
     public void TakeDamage (float amount)

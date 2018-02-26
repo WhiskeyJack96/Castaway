@@ -110,11 +110,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 48e2bfd6506bf434696252e0d06a7803, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  shealth: 15
-  movespeed: 1
-  Player: {fileID: 1770328706613274, guid: 8410ac2f72247cf4286792bfb6eb8514, type: 2}
-  shootingdistance: 4
+  Play: {fileID: 0}
 --- !u!114 &114152670137869784
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -153,6 +149,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71491c45ff8ac3b498487b127d9bb93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageTaken: {fileID: 8300000, guid: ac03c10448123734696159a5d897b963, type: 3}
 --- !u!212 &212829183525847382
 SpriteRenderer:
   m_ObjectHideFlags: 1

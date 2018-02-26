@@ -121,6 +121,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71491c45ff8ac3b498487b127d9bb93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  damageTaken: {fileID: 8300000, guid: ac03c10448123734696159a5d897b963, type: 3}
 --- !u!114 &114961045013618414
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -132,9 +133,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4bde439370f007048a12e7b1375d5025, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damage: 20
-  zhealth: 15
-  Player: {fileID: 1443169951816220, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
+  Play: {fileID: 0}
 --- !u!212 &212961982199993638
 SpriteRenderer:
   m_ObjectHideFlags: 1
