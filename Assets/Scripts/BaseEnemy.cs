@@ -70,7 +70,7 @@ public class BaseEnemy : MonoBehaviour {
         transform.localScale = new Vector3 (transform.localScale.x * mod, transform.localScale.y * mod, transform.localScale.z);
     }
 
-    protected virtual void scaleBiome(string biome)
+    public virtual void scaleBiome(float mod1, float mod2)
     {
         return;
     }
