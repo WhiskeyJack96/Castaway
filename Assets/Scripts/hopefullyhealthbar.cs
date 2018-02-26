@@ -10,8 +10,9 @@ public class hopefullyhealthbar : MonoBehaviour {
     public sliding healthSlider;
 
     public AudioClip damageTaken;
+    public AudioClip playerDead;
 
-    bool isDead = false;
+    public bool isDead = false;
     bool damaged;
 
     void Awake()
@@ -38,8 +39,10 @@ public class hopefullyhealthbar : MonoBehaviour {
     void Death()
     {
         print("died");
+        SoundManager.instance.PlaySingle(playerDead);
         isDead = true;
         Destroy(gameObject);
+        SoundManager.instance.musicSource.Stop();
     }
     // Use this for initialization
     void Start () {

@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyHealth : MonoBehaviour {
     private float MaxHealth=1;
     private float health=1;
+    public AudioClip damageTaken;
 
 	// Use this for initialization
 	void Start () {
@@ -29,6 +30,8 @@ public class EnemyHealth : MonoBehaviour {
     public void updateHealth(float change)
     {
         health -=change;
+        if (change > 0)
+            SoundManager.instance.RandomizeSfx(damageTaken);
         if (health > MaxHealth)
             health = MaxHealth;
     }
