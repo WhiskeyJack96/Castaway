@@ -19,7 +19,7 @@ public class ScoreController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (GetComponent<hopefullyheathbar>().isDead)
+		if (GetComponent<hopefullyhealthbar>().isDead)
 			{
 				totaller();
 			}
