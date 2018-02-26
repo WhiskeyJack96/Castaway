@@ -43,7 +43,7 @@ public class hopefullyhealthbar : MonoBehaviour {
         print("died");
         SoundManager.instance.PlaySingle(playerDead);
         isDead = true;
-        GetComponent<ScoreController>().totaller();
+        GameObject.Find("GameController").GetComponent<Timer>().death = true;
         Destroy(gameObject);
         SoundManager.instance.musicSource.Stop();
     }

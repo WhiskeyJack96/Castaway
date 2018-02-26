@@ -46,5 +46,6 @@ public class ScoreController : MonoBehaviour {
 	public void totaller()
 	{
 		total = fromtime + fromwood + fromshield + fromroll +  fromenemies;
+		print(total);
 	}
 }

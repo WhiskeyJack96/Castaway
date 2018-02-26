@@ -6,7 +6,7 @@ public class Timer : MonoBehaviour {
 
 public int scorenum;
 private int totalscore;
-private bool death = false;
+public bool death = false;
 private int GameSeconds;
 public int mobshift = 5;
 
@@ -22,11 +22,9 @@ public int mobshift = 5;
 	void Update () {
 		//death = GetComponent<hopefullyhealthbar>.isDead;
 		//if (GetComponent<hopefullyhealthbar>.isDead)
-		death = GetComponent<hopefullyhealthbar>().isDead;
 		if (death)
 		{	
-			totalscore = scorenum;
-			print(totalscore);
+			GetComponent<ScoreController>().totaller();
 			CancelInvoke();
 		}
 		

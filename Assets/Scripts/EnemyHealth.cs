@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
+    private static GameObject score;
     private float MaxHealth=1;
     private float health=1;
     public AudioClip damageTaken;
 
 	// Use this for initialization
 	void Start () {
-		
+		score = GameObject.Find("GameController");
 	}
 	
 	// Update is called once per frame
@@ -17,7 +18,7 @@ public class EnemyHealth : MonoBehaviour {
         if (health <= 0)
         {
             GetComponent<dropItems>().ChooseItem();
-            GetComponent<ScoreController>().enemies();
+            score.GetComponent<ScoreController>().enemies();
 			Destroy(this.gameObject);
 			return;
         }

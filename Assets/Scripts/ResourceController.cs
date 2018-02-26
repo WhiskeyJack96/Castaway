@@ -6,6 +6,11 @@ public class ResourceController : MonoBehaviour {
 	private string Wood;
 	public int TotalWood;
 	private int amount;
+	public GameObject wall;
+	public bool canBuild = true;
+	public float timer = .1f;
+	public float wallhealth = 30f;
+
 
 	// Use this for initialization
 	void Start () {
@@ -14,7 +19,7 @@ public class ResourceController : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		place();
 	}
 
 	public void addresource(string resource, int amount)
@@ -23,9 +28,32 @@ public class ResourceController : MonoBehaviour {
 		if (resource == "Wood")
 		{
 			TotalWood  += amount;
-			print("I picked up Wood!");
+			//print("I picked up Wood!");
 		
 		}
 	}
 
+
+	public void place()
+	{
+
+		if(Input.GetKeyDown(KeyCode.F) && TotalWood > 0 && canBuild)
+		{
+			Vector3 mouse = Input.mousePosition;
+			mouse.z = 10;
+			mouse = Camera.main.ScreenToWorldPoint (mouse);
+			wall = Instantiate(wall, mouse, new Quaternion(0,0,0,0));
+			wall.GetComponent<EnemyHealth>().setHealth(wallhealth);
+			StartCoroutine(cooldown(timer));
+
+		}
+	}
+
+	IEnumerator cooldown(float timer){
+        canBuild = false;
+        yield return new WaitForSeconds(timer);
+        canBuild = true;
+    }
+
 }
+
