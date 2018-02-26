@@ -38,5 +38,7 @@ public class Zombie : BaseEnemy {
         //print("I am the attacking");
         if(collider.gameObject.tag == "Player")
             Player.GetComponent<hopefullyhealthbar>().TakeDamage(AttackDamage);
+        if(collider.gameObject.tag == "Structure")
+            collider.gameObject.GetComponent<EnemyHealth>().updateHealth(AttackDamage);
     }
 }

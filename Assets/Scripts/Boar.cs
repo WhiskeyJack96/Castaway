@@ -88,5 +88,7 @@ public class Boar : BaseEnemy {
 		//print("I finally hit it!");
 		if(collider.gameObject.tag == "Player")
 			Player.GetComponent<hopefullyhealthbar>().TakeDamage(AttackDamage);
+		if(collider.gameObject.tag == "Structure")
+            collider.gameObject.GetComponent<EnemyHealth>().updateHealth(AttackDamage);
 	}
 }

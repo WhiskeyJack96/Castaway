@@ -11,6 +11,7 @@ public class ResourceController : MonoBehaviour {
 	public GameObject wall;
 	public bool canBuild = true;
 	public float timer = .1f;
+	public float wallhealth = 30f;
 
 	// Use this for initialization
 	void Start () {
@@ -41,9 +42,13 @@ public class ResourceController : MonoBehaviour {
 
 	public void place()
 	{
-		if(Input.GetKeyDown(KeyCode.F) && TotalWood>0 && canBuild)
+		if(Input.GetKeyDown(KeyCode.F) && TotalWood > 0 && canBuild)
 		{
-			Instantiate(wall, Input.mousePosition, new Quaternion(0,0,0,0));
+			Vector3 mouse = Input.mousePosition;
+			mouse.z = 10;
+			mouse = Camera.main.ScreenToWorldPoint (mouse);
+			wall = Instantiate(wall, mouse, new Quaternion(0,0,0,0));
+			wall.GetComponent<EnemyHealth>().setHealth(wallhealth);
 			StartCoroutine(cooldown(timer));
 
 		}

@@ -8,7 +8,10 @@ public class dropItems : MonoBehaviour {
     //instantiates items based on enemy type
     public void ChooseItem()
     {
-        Instantiate(item, transform.position + new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+        if(item != null)
+        {
+            Instantiate(item, transform.position + new Vector3(0, 0, 0), new Quaternion(0, 0, 0, 0));
+        }
     }
 
     // Use this for initialization
