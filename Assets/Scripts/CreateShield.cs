@@ -31,6 +31,9 @@ public class CreateShield : MonoBehaviour {
 		}
 
 	}
+	public void addammo(int amount){
+		ShieldResource = ShieldResource + amount;
+	}
 	IEnumerator cooldown(float CDTime){
 		canshield = false;
 		yield return new WaitForSeconds (CDTime);
