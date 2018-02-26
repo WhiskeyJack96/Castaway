@@ -239,7 +239,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   cdtime: 1
   itime: 0.5
-  Shield: {fileID: 0}
+  Shield: {fileID: 1503221442936710}
   isrolling: 0
 --- !u!114 &114442280309924066
 MonoBehaviour:
