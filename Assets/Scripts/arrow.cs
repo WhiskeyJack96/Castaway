@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class arrow : MonoBehaviour {
-	
+	public string ttag;
 	public int arrowdamage = 15;
 	public GameObject Player;
 	private Rigidbody2D rig;
@@ -25,18 +25,19 @@ public class arrow : MonoBehaviour {
 
 	public void OnTriggerEnter2D(Collider2D collider)
 	{
-		if(collider.gameObject.tag == "Player")
+		string t = collider.gameObject.tag;
+		if(t == "Player" && t!=ttag)
 		{
 			print("It's a hit");
 			collider.gameObject.GetComponent<hopefullyhealthbar>().TakeDamage(arrowdamage);
 			Destroy(this.gameObject);
 			return;
 		}
-		if (collider.gameObject.tag == "Shield") {
+		if (t== "Shield" && t!=ttag) {
 			collider.gameObject.GetComponent<ShieldHealth>().updateHealth (arrowdamage);
 			Destroy (this.gameObject);
 		}
-		if(collider.gameObject.tag == "Enemy")
+		if(t == "Enemy" && t!=ttag)
 		{
 			collider.gameObject.GetComponent<EnemyHealth>().updateHealth(arrowdamage);
 			Destroy(this.gameObject);

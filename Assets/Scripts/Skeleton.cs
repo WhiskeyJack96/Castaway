@@ -38,6 +38,7 @@ public class Skeleton : BaseEnemy {
 
 	public override void scaleBiome(float mod1, float mod2, Color colorchange)
     {
+    	healthTracker = GetComponent<EnemyHealth>();
     	healthTracker.setHealth(BaseHealth * mod1);
     	followRange = followRange * mod2;
         GetComponent<SpriteRenderer>().color = colorchange;

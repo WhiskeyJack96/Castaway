@@ -45,9 +45,9 @@ public class meleeAttack : MonoBehaviour {
         float initTheta = (-theta/2f)+playerRotation;
         float incrementTheta = theta/n;
         //print(initTheta + (n*incrementTheta));
+        animator.SetTrigger("swordANI");
         for(int i = 0;i < n;i++){
             int hit = col.Raycast(new Vector2(Mathf.Cos(initTheta + (i*incrementTheta)), Mathf.Sin(initTheta + (i*incrementTheta))),res,length,mask);
-            animator.SetTrigger("swordANI");
             //Debug.DrawRay(transform.position, new Vector2(Mathf.Cos(initTheta + (i*incrementTheta)), Mathf.Sin(initTheta + (i*incrementTheta))),Color.red, 3f);
             if(hit>0){
                 for(int j =0; j <hit;j++){

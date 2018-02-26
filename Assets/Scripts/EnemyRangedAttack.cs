@@ -5,6 +5,7 @@ using UnityEngine;
 public class EnemyRangedAttack : MonoBehaviour {
 
 	public GameObject arrow;
+
 	public float arrowSpeed = 150f;
 	private Rigidbody2D rb;
 	private bool canshoot = true;
@@ -52,11 +53,12 @@ public class EnemyRangedAttack : MonoBehaviour {
 		if (canshoot && range) //Makes an arrow, launches arrow at player's current location, can optimize with multiplication
 		{
 			GameObject Iarrow;
-			Iarrow = Instantiate (arrow, transform.position + new Vector3 (0,0,0), new Quaternion(0,0,0,0));
-			rb = Iarrow.GetComponent<Rigidbody2D>();
 			movespeed = Player.GetComponent<Rigidbody2D>().velocity;
 			Vector3 toplayer = Player.transform.position - transform.position;
 			float angle = Mathf.Atan2(toplayer.y, toplayer.x) * Mathf.Rad2Deg;
+			Iarrow = Instantiate (arrow, transform.position + toplayer.normalized*0.25f, new Quaternion(0,0,0,0));
+			rb = Iarrow.GetComponent<Rigidbody2D>();
+			Iarrow.transform.gameObject.tag = this.gameObject.tag;
        		Iarrow.transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);
 			//ME FIDDLING AROUND WITH PREDICTIVE SHOOTING, CAN'T QUITE FIGURE IT OUT 
 			//Vector3 predict = ((transform.position.x - (arrowSpeed/movespeed.x)*Player.transform.position.x)/(1-(arrowSpeed/movespeed.x)), (transform.position.y - (arrowSpeed/movespeed.y)*Player.transform.position.y)/(1-(arrowSpeed/movespeed.y)), 0);                                             ).normalized

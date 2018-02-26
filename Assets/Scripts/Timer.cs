@@ -16,8 +16,8 @@ private bool death;
 	
 	// Update is called once per frame
 	void Update () {
-		death = GetComponent<hopefullyhealthbar>.isDead;
-		if (GetComponent<hopefullyhealthbar>.isDead)
+		//death = GetComponent<hopefullyhealthbar>.isDead;
+		//if (GetComponent<hopefullyhealthbar>.isDead)
 		{
 			totalscore = scorenum;
 			print(totalscore);
