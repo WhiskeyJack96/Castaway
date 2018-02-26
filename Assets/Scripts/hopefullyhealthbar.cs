@@ -7,7 +7,7 @@ public class hopefullyhealthbar : MonoBehaviour {
 
     public float maxHealth = 100;
     public float currentHealth;
-    public sliding healthSlider;
+    public Slider healthSlider;
 
     public AudioClip damageTaken;
     public AudioClip playerDead;
@@ -31,7 +31,7 @@ public class hopefullyhealthbar : MonoBehaviour {
             SoundManager.instance.RandomizeSfx(damageTaken);
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
-        //healthSlider.updateSlider(currentHealth);
+        healthSlider.value = ((int)currentHealth);
         if(currentHealth <= 0 && !isDead)
         {
             Death();
