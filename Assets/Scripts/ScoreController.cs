@@ -8,7 +8,7 @@ public class ScoreController : MonoBehaviour {
 	private int fromshield = 0;
 	private int fromroll = 0;
 	private int fromenemies = 0;
-	private int total;
+	public int total;
 	private bool death;
 
 
