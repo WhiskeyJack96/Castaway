@@ -21,8 +21,8 @@ GameObject:
   - component: {fileID: 4671856729146496}
   - component: {fileID: 212554333971977370}
   - component: {fileID: 60501265892922670}
-  - component: {fileID: 111910568905842922}
-  - component: {fileID: 95746959367422662}
+  - component: {fileID: 111526430308587112}
+  - component: {fileID: 95691843487494060}
   m_Layer: 2
   m_Name: Weapon
   m_TagString: Untagged
@@ -103,8 +103,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443169951816220}
-  m_LocalRotation: {x: -0, y: -0, z: -0.8505719, w: -0.52585876}
-  m_LocalPosition: {x: -0.07195999, y: 0.14176607, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671856729146496}
@@ -193,7 +193,7 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.45526874, y: 2.5600004}
   m_Direction: 0
---- !u!95 &95746959367422662
+--- !u!95 &95691843487494060
 Animator:
   serializedVersion: 3
   m_ObjectHideFlags: 1
@@ -210,7 +210,7 @@ Animator:
   m_WarningMessage: 
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
---- !u!111 &111910568905842922
+--- !u!111 &111526430308587112
 Animation:
   m_ObjectHideFlags: 1
   m_PrefabParentObject: {fileID: 0}
