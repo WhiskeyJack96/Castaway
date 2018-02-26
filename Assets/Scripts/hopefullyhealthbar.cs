@@ -19,7 +19,7 @@ public class hopefullyhealthbar : MonoBehaviour {
     void Awake()
     {
         currentHealth = maxHealth;
-        SoundManager.instance.PlaySingle(gameStart);
+        //SoundManager.instance.PlaySingle(gameStart);
     }
 
     public void TakeDamage (float amount)

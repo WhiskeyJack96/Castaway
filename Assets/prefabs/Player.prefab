@@ -47,7 +47,6 @@ GameObject:
   - component: {fileID: 114442280309924066}
   - component: {fileID: 114561552203957866}
   - component: {fileID: 114814159299193334}
-  - component: {fileID: 114664331928417162}
   - component: {fileID: 95114934212535168}
   m_Layer: 2
   m_Name: Player
@@ -280,7 +279,7 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443169951816220}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ece3ac8d9e0a446a96ed98d23f13e7, type: 3}
   m_Name: 
@@ -313,22 +312,6 @@ MonoBehaviour:
   theta: 2.169053
   length: 0.32384175
   attackButton: 323
---- !u!114 &114664331928417162
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 1443169951816220}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 3e9c59c8bd89d68448f376b9af96cdcf, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  TotalWood: 5
-  wall: {fileID: 1397598740055012, guid: 847de87d8a3f5b24dbef73b39adbf46b, type: 2}
-  canBuild: 1
-  timer: 0.1
-  wallhealth: 30
 --- !u!114 &114750543294361782
 MonoBehaviour:
   m_ObjectHideFlags: 1

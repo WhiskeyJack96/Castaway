@@ -21,7 +21,7 @@ public class BaseResource : MonoBehaviour {
 	{
 		if (collider.gameObject.tag == "Player")
 		{
-			collider.gameObject.GetComponent<ResourceController>().addresource(resource, incamount);
+			GameObject.Find("GameController").GetComponent<ResourceController>().addresource(resource, incamount);
 			Destroy(this.gameObject);
 		}
 
