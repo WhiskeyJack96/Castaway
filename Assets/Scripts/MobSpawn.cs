@@ -24,17 +24,13 @@ public class MobSpawn : MonoBehaviour {
 	private float zhealthmod = 1;
 	private float movemod = 1;
 	public LayerMask mask;
+	public Color colorchange;
 	// Use this for initialization
+	//timer for spawn rate/score
+	//color change by biome
+	//check biome of spawn location.
 	void Start () {
 		Player = GameObject.Find("Player");
-		//might be -transform.forward and needs mask configured and hit.collider is a thing
-		
-		//if(hit)
-		//{
-			//do something
-		//}
-
-		//hit.collider.gameObject.tag
 		
 	}
 	
@@ -63,6 +59,7 @@ public class MobSpawn : MonoBehaviour {
 	{
 		if (biome == "Grassy(Clone)")
 		{
+			colorchange  =  new Color(1,1,1,1);
 			chargemod  = 1f;
 			waitmod = 1f;
 			shealthmod = 0.75f;
@@ -72,6 +69,7 @@ public class MobSpawn : MonoBehaviour {
 		}
 		else if (biome == "Sand(Clone)")
 		{
+			colorchange  = new Color(1, 0.92f, 0.016f, 1);
 			chargemod  = 1.5f;
 			waitmod = 0.5f;
 			shealthmod = 1f;
@@ -81,6 +79,7 @@ public class MobSpawn : MonoBehaviour {
 		}
 		else if (biome == "Mountain(Clone)")
 		{
+			colorchange  = new Color(.5f,.5f,.5f,1);
 			chargemod  = 0.5f;
 			waitmod = 1.5f;
 			shealthmod = 2f;
@@ -90,6 +89,7 @@ public class MobSpawn : MonoBehaviour {
 		}
 		else if (biome == "BadSand(Clone)")
 		{
+			colorchange  = new Color(1,0,0,1);
 			chargemod  = 2f;
 			waitmod = 0.25f;
 			shealthmod = 1f;
@@ -99,6 +99,7 @@ public class MobSpawn : MonoBehaviour {
 		}
 		else if (biome == "Ice")
 		{
+			colorchange  = new Color(0,0,1,1);
 			chargemod  = 0.5f;
 			waitmod = 2f;
 			shealthmod = 1.5f;
@@ -175,7 +176,7 @@ public class MobSpawn : MonoBehaviour {
 	{
 		GameObject z = Instantiate(IZombie, v3Pos, new Quaternion(0,0,0,0));
 		z.GetComponent<Zombie>().Play = Player;
-		z.GetComponent<Zombie>().scaleBiome(zhealthmod, movemod);
+		z.GetComponent<Zombie>().scaleBiome(zhealthmod, movemod, colorchange);
 		//Give Zombie Class its biome modifiers
 		return;
 	}
@@ -185,7 +186,7 @@ public class MobSpawn : MonoBehaviour {
 	{
 		GameObject s = Instantiate(ISkele, v3Pos, new Quaternion(0,0,0,0));
 		s.GetComponent<Skeleton>().Play = Player;
-		s.GetComponent<Skeleton>().scaleBiome(shealthmod, rangemod);
+		s.GetComponent<Skeleton>().scaleBiome(shealthmod, rangemod, colorchange);
 		//Give Skeleton Class its biome modifiers
 		return;
 	}
@@ -194,7 +195,7 @@ public class MobSpawn : MonoBehaviour {
 	{
 		GameObject b = Instantiate(IBoar, v3Pos, new Quaternion(0,0,0,0));
 		b.GetComponent<Boar>().Play = Player;
-		b.GetComponent<Boar>().scaleBiome(chargemod, waitmod);
+		b.GetComponent<Boar>().scaleBiome(chargemod, waitmod, colorchange);
 		//Give Boar Class its biome modifiers
 		return;
 	}

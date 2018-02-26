@@ -36,10 +36,11 @@ public class Skeleton : BaseEnemy {
 			GetComponent<EnemyRangedAttack>().inrange(false);
 	}
 
-	public override void scaleBiome(float mod1, float mod2)
+	public override void scaleBiome(float mod1, float mod2, Color colorchange)
     {
     	healthTracker.setHealth(BaseHealth * mod1);
     	followRange = followRange * mod2;
+        GetComponent<SpriteRenderer>().color = colorchange;
         return;
     }
 

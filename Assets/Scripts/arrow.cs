@@ -33,8 +33,14 @@ public class arrow : MonoBehaviour {
 			return;
 		}
 		if (collider.gameObject.tag == "Shield") {
-			collider.gameObject.GetComponent<ShieldHealth> ().updateHealth (arrowdamage);
+			collider.gameObject.GetComponent<ShieldHealth>().updateHealth (arrowdamage);
 			Destroy (this.gameObject);
+		}
+		if(collider.gameObject.tag == "Enemy")
+		{
+			collider.gameObject.GetComponent<EnemyHealth>().updateHealth(arrowdamage);
+			Destroy(this.gameObject);
+			return;
 		}
 	}
 }

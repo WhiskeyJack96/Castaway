@@ -75,10 +75,11 @@ public class Boar : BaseEnemy {
 		charging = false;
 	}
 
-	public override void scaleBiome(float mod1, float mod2)
+	public override void scaleBiome(float mod1, float mod2, Color colorchange)
     {
     	chargespeed = chargespeed * mod1;
     	waittime = waittime * mod2;
+        GetComponent<SpriteRenderer>().color = colorchange;
         return;
     }
 

@@ -13,6 +13,8 @@ public class BaseEnemy : MonoBehaviour {
 
     protected float followRange{get;set;}
 
+    protected Color color{get;set;}
+
     protected bool InRange{get;set;}
 	// Use this for initialization
 	void Start () {
@@ -70,7 +72,7 @@ public class BaseEnemy : MonoBehaviour {
         transform.localScale = new Vector3 (transform.localScale.x * mod, transform.localScale.y * mod, transform.localScale.z);
     }
 
-    public virtual void scaleBiome(float mod1, float mod2)
+    public virtual void scaleBiome(float mod1, float mod2, Color colorchange)
     {
         return;
     }

@@ -24,10 +24,11 @@ public class Zombie : BaseEnemy {
 		face();
 	}
 
-	public override void scaleBiome(float mod1, float mod2)
+	public override void scaleBiome(float mod1, float mod2, Color colorchange) // May need to be a Color instead of a Vector 4
     {
         healthTracker = GetComponent<EnemyHealth>();
         healthTracker.setHealth(BaseHealth*mod1);
+        GetComponent<SpriteRenderer>().color = colorchange;
         Movespeed = Movespeed * mod2;
         return;
     }
