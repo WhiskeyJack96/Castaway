@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4425382541712178}
   - component: {fileID: 212175402241452684}
   - component: {fileID: 114761133281634294}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Grassy
   m_TagString: Untagged
   m_Icon: {fileID: 0}

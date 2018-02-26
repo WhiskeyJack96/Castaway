@@ -24,8 +24,11 @@ public class Zombie : BaseEnemy {
 		face();
 	}
 
-	protected override void scaleBiome(string biome)
+	public override void scaleBiome(float mod1, float mod2)
     {
+        healthTracker = GetComponent<EnemyHealth>();
+        healthTracker.setHealth(BaseHealth*mod1);
+        Movespeed = Movespeed * mod2;
         return;
     }
 

@@ -36,8 +36,10 @@ public class Skeleton : BaseEnemy {
 			GetComponent<EnemyRangedAttack>().inrange(false);
 	}
 
-	protected override void scaleBiome(string biome)
+	public override void scaleBiome(float mod1, float mod2)
     {
+    	healthTracker.setHealth(BaseHealth * mod1);
+    	followRange = followRange * mod2;
         return;
     }
 

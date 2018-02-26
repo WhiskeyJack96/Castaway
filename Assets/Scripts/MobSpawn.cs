@@ -16,67 +16,26 @@ public class MobSpawn : MonoBehaviour {
 	private float spawnx;
 	private float spawny;
 	private GameObject Player;
-	private float chargemod;
-	private float waitmod;
-	private float shealthmod;
-	private float rangemod;
-	private float zhealthmod;
-	private float movemod;
+	private string biome;
+	private float chargemod = 1;
+	private float waitmod = 1;
+	private float shealthmod = 1;
+	private float rangemod = 1;
+	private float zhealthmod = 1;
+	private float movemod = 1;
+	public LayerMask mask;
 	// Use this for initialization
 	void Start () {
 		Player = GameObject.Find("Player");
 		//might be -transform.forward and needs mask configured and hit.collider is a thing
-		//RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward,length,mask);
+		
 		//if(hit)
 		//{
 			//do something
 		//}
-		/*if (hit.collider.gameObject.tag == "Grassy")
-		{
-			chargemod  = 1f;
-			waitmod = 1f;
-			shealthmod = 0.75f;
-			rangemod = 0.5f;
-			zhealthmod = 1f;
-			movemod = 1f;
-		}
-		else if (hit.collider.gameObject.tag == "Sand")
-		{
-			chargemod  = 1.5f;
-			waitmod = 0.5f;
-			shealthmod = 1f;
-			rangemod = 1f;
-			zhealthmod = 1f;
-			movemod = 1f;
-		}
-		else if (hit.collider.gameObject.tag == "Mountain")
-		{
-			chargemod  = 0.5f;
-			waitmod = 1.5;
-			shealthmod = 2f;
-			rangemod = 2f;
-			zhealthmod = 1.5f ;
-			movemod = 1f;
-		}
-		else if (hit.collider.gameObject.tag == "Bad Sand")
-		{
-			chargemod  = 2f;
-			waitmod = 0.25f;
-			shealthmod = 1f;
-			rangemod = 1f;
-			zhealthmod = 1.5f;
-			movemod = 0.75f;
-		}
-		else if (hit.collider.gameObject.tag == "Ice")
-		{
-			chargemod  = 0.5f;
-			waitmod = 2f;
-			shealthmod = 1.5f;
-			rangemod = 1f;
-			zhealthmod = 5f;
-			movemod = 2f;
-		}
-		*/
+
+		//hit.collider.gameObject.tag
+		
 	}
 	
 	// Update is called once per frame
@@ -88,6 +47,65 @@ public class MobSpawn : MonoBehaviour {
 		spawn();
 		}
 
+	}
+
+	string BiomeGet()
+	{
+		//Debug.DrawRay(transform.position, transform.forward*100, Color.red, 3f);
+		RaycastHit2D hit = Physics2D.Raycast(transform.position, transform.forward,100f,mask);
+		biome = hit.transform.gameObject.name;
+		//print(hit.transform.gameObject.name);
+		return biome;
+
+	}
+
+	void ModGet(string biome)
+	{
+		if (biome == "Grassy(Clone)")
+		{
+			chargemod  = 1f;
+			waitmod = 1f;
+			shealthmod = 0.75f;
+			rangemod = 0.5f;
+			zhealthmod = 1f;
+			movemod = 1f;
+		}
+		else if (biome == "Sand(Clone)")
+		{
+			chargemod  = 1.5f;
+			waitmod = 0.5f;
+			shealthmod = 1f;
+			rangemod = 1f;
+			zhealthmod = 1f;
+			movemod = 1f;
+		}
+		else if (biome == "Mountain(Clone)")
+		{
+			chargemod  = 0.5f;
+			waitmod = 1.5f;
+			shealthmod = 2f;
+			rangemod = 2f;
+			zhealthmod = 1.5f ;
+			movemod = 1f;
+		}
+		else if (biome == "BadSand(Clone)")
+		{
+			chargemod  = 2f;
+			waitmod = 0.25f;
+			shealthmod = 1f;
+			rangemod = 1f;
+			zhealthmod = 1.5f;
+			movemod = 0.75f;
+		}
+		else if (biome == "Ice")
+		{
+			chargemod  = 0.5f;
+			waitmod = 2f;
+			shealthmod = 1.5f;
+			rangemod = 1f;
+			zhealthmod = 5f;
+			movemod = 2f;
+		}
 	}
 
 	void varpos()
@@ -117,7 +135,7 @@ public class MobSpawn : MonoBehaviour {
 	{
 		if (able && GameObject.FindGameObjectsWithTag("Enemy").Length < enemies)
 		{
-
+			ModGet(BiomeGet());
     		chooser();
     		able = false;
     	}
@@ -157,6 +175,8 @@ public class MobSpawn : MonoBehaviour {
 	{
 		GameObject z = Instantiate(IZombie, v3Pos, new Quaternion(0,0,0,0));
 		z.GetComponent<Zombie>().Play = Player;
+		z.GetComponent<Zombie>().scaleBiome(zhealthmod, movemod);
+		//Give Zombie Class its biome modifiers
 		return;
 	}
 
@@ -165,6 +185,8 @@ public class MobSpawn : MonoBehaviour {
 	{
 		GameObject s = Instantiate(ISkele, v3Pos, new Quaternion(0,0,0,0));
 		s.GetComponent<Skeleton>().Play = Player;
+		s.GetComponent<Skeleton>().scaleBiome(shealthmod, rangemod);
+		//Give Skeleton Class its biome modifiers
 		return;
 	}
 
@@ -172,6 +194,8 @@ public class MobSpawn : MonoBehaviour {
 	{
 		GameObject b = Instantiate(IBoar, v3Pos, new Quaternion(0,0,0,0));
 		b.GetComponent<Boar>().Play = Player;
+		b.GetComponent<Boar>().scaleBiome(chargemod, waitmod);
+		//Give Boar Class its biome modifiers
 		return;
 	}
 

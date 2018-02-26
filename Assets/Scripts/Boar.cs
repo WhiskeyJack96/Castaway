@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Boar : BaseEnemy {
 
-	public int chargespeed = 25;
+	public float chargespeed = 2f;
 	public int chargedamage = 15;
 	public float waittime = .5f;
 	public int chargeduration = 1;
@@ -12,8 +12,6 @@ public class Boar : BaseEnemy {
 	private Vector3 movement;
 	private Vector3 oldpos;
 	private bool charging = false;
-	public float chargemod;      // Set by Biome in Monster Spawn and used to increase move speed during charge and decrease wait time on charge
-	public float waitmod; 		 // 0 < chargemod < 2     0 < waitmod < 2
 	public GameObject Play;
 	// Use this for initialization
 	void Start () {
@@ -77,8 +75,10 @@ public class Boar : BaseEnemy {
 		charging = false;
 	}
 
-	protected override void scaleBiome(string biome)
+	public override void scaleBiome(float mod1, float mod2)
     {
+    	chargespeed = chargespeed * mod1;
+    	waittime = waittime * mod2;
         return;
     }
 

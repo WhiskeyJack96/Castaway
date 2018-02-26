@@ -131,6 +131,48 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   TotalStone: 5
   TotalWood: 5
+--- !u!1001 &569214370
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.75788075
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: 1.473801
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0.015625
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4958566670056804, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+      propertyPath: m_RootOrder
+      value: 2
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
+  m_IsPrefabParent: 0
 --- !u!1 &680042925
 GameObject:
   m_ObjectHideFlags: 0
@@ -140,7 +182,7 @@ GameObject:
   m_Component:
   - component: {fileID: 680042926}
   - component: {fileID: 680042927}
-  m_Layer: 0
+  m_Layer: 4
   m_Name: Moob Spoon
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -177,6 +219,15 @@ MonoBehaviour:
   ISkele: {fileID: 1944954517620204, guid: 8b71192a31ba81443bf6c79a290f7bb8, type: 2}
   IBoar: {fileID: 1947327979231376, guid: ae11a991f0e8eec45b45478423daa380, type: 2}
   delta: 1.25
+  chargemod: 0
+  waitmod: 0
+  shealthmod: 0
+  rangemod: 0
+  zhealthmod: 0
+  movemod: 0
+  mask:
+    serializedVersion: 2
+    m_Bits: 16
 --- !u!1 &828833921
 GameObject:
   m_ObjectHideFlags: 0
@@ -320,6 +371,12 @@ Prefab:
       propertyPath: currentHealth
       value: 100
       objectReference: {fileID: 0}
+    - target: {fileID: 114814159299193334, guid: 76827ec04bc39e84d8ccf1d708d57e5d,
+        type: 2}
+      propertyPath: arrow
+      value: 
+      objectReference: {fileID: 1531712082079356, guid: 031a2fbd5a577964c839bc2f376e69d6,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
   m_IsPrefabParent: 0
