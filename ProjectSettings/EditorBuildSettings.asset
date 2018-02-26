@@ -11,3 +11,6 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/JakesScene.unity
     guid: 6d2092f9c898498408c7ff466c606f1d
+  - enabled: 1
+    path: Assets/Scenes/TestMain.unity
+    guid: 649f83136ae85a84c99cb384e3e15fd7
