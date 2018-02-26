@@ -28,7 +28,6 @@ public class arrow : MonoBehaviour {
 		string t = collider.gameObject.tag;
 		if(t == "Player" && t!=ttag)
 		{
-			print("It's a hit");
 			collider.gameObject.GetComponent<hopefullyhealthbar>().TakeDamage(arrowdamage);
 			Destroy(this.gameObject);
 			return;

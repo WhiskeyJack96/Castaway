@@ -48,6 +48,7 @@ GameObject:
   - component: {fileID: 114561552203957866}
   - component: {fileID: 114814159299193334}
   - component: {fileID: 114664331928417162}
+  - component: {fileID: 95114934212535168}
   m_Layer: 2
   m_Name: Player
   m_TagString: Player
@@ -104,8 +105,8 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443169951816220}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: 0, z: 0.8465748, w: 0.5322698}
+  m_LocalPosition: {x: 40.264053, y: 36.26863, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4671856729146496}
@@ -194,6 +195,23 @@ CapsuleCollider2D:
   m_Offset: {x: 0, y: 0}
   m_Size: {x: 0.45526874, y: 2.5600004}
   m_Direction: 0
+--- !u!95 &95114934212535168
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1443169951816220}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 23feaf34f3412bf4fb182fc878aaf8ab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!95 &95691843487494060
 Animator:
   serializedVersion: 3
@@ -262,18 +280,18 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1443169951816220}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 47ece3ac8d9e0a446a96ed98d23f13e7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   maxHealth: 100
-  currentHealth: 100
+  currentHealth: -245
   healthSlider: {fileID: 0}
   damageTaken: {fileID: 8300000, guid: 4c12de26fcfb90c4b856b4078e328efa, type: 3}
   playerDead: {fileID: 8300000, guid: 6ff18fb888604044fab0e2f4d08e0425, type: 3}
   gameStart: {fileID: 8300000, guid: 4f17eb5cd8d5076498c0c1fdabb98a8e, type: 3}
-  isDead: 0
+  isDead: 1
 --- !u!114 &114561552203957866
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -306,7 +324,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3e9c59c8bd89d68448f376b9af96cdcf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  TotalWood: 0
+  TotalWood: 5
+  wall: {fileID: 1397598740055012, guid: 847de87d8a3f5b24dbef73b39adbf46b, type: 2}
+  canBuild: 1
+  timer: 0.1
+  wallhealth: 30
 --- !u!114 &114750543294361782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -331,7 +353,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ed0dfc8e2273cde45be66345d9e9b5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  arrow: {fileID: 0}
+  arrow: {fileID: 1531712082079356, guid: 031a2fbd5a577964c839bc2f376e69d6, type: 2}
   arrowSpeed: 10
   ammo: 5
 --- !u!212 &212525227150240372
@@ -368,7 +390,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 05b69e2fee7eaed4cba3a6182cabf94f, type: 3}
+  m_Sprite: {fileID: 21300000, guid: f5c746f7b429a9241b167441d0e509bb, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
