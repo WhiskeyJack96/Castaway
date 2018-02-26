@@ -14,20 +14,17 @@ public class ScoreController : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+		InvokeRepeating("setter",0, 1.0f);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		if (GetComponent<hopefullyhealthbar>().isDead)
-			{
-				totaller();
-			}
+	
 	}
 
 	public void enemies()
 	{
-		fromenemies += 1;
+		fromenemies += 5;
 	}
 
 	public void changeshield(int amount)
@@ -38,12 +35,6 @@ public class ScoreController : MonoBehaviour {
 	public void changeroll(int amount)
 	{
 		fromroll += amount;
-	}
-
-	public void doesadie()
-	{
-	
-
 	}
 
 	public void setter()
