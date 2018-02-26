@@ -22,8 +22,9 @@ GameObject:
   - component: {fileID: 212151130492084074}
   - component: {fileID: 61648176427871962}
   - component: {fileID: 114699180230880958}
+  - component: {fileID: 114506691144232700}
   m_Layer: 0
-  m_Name: scarysand
+  m_Name: wall
   m_TagString: Structure
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -67,6 +68,18 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.32, y: 0.32}
   m_EdgeRadius: 0
+--- !u!114 &114506691144232700
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1397598740055012}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 87eb7054b161f7e43899efff088afd0e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  item: {fileID: 0}
 --- !u!114 &114699180230880958
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -78,7 +91,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 71491c45ff8ac3b498487b127d9bb93e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  damageTaken: {fileID: 0}
+  damageTaken: {fileID: 8300000, guid: 4c12de26fcfb90c4b856b4078e328efa, type: 3}
 --- !u!212 &212151130492084074
 SpriteRenderer:
   m_ObjectHideFlags: 1

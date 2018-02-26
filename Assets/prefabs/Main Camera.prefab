@@ -104,6 +104,10 @@ MonoBehaviour:
   ISkele: {fileID: 1944954517620204, guid: 8b71192a31ba81443bf6c79a290f7bb8, type: 2}
   IBoar: {fileID: 1947327979231376, guid: ae11a991f0e8eec45b45478423daa380, type: 2}
   delta: 40
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
+  colorchange: {r: 0, g: 0, b: 0, a: 0}
 --- !u!114 &114502859607923638
 MonoBehaviour:
   m_ObjectHideFlags: 1

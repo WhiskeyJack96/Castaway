@@ -10,6 +10,13 @@ public class GameController : MonoBehaviour {
     public NoiseMap map;
     public int diff = 2;
 
+    public GameObject top;
+    public GameObject bottom;
+    public GameObject left;
+    public GameObject right;
+
+
+
 	// Use this for initialization
 	void Start () {
         //diff = PlayerPrefs.GetInt("Difficulty Setting");
@@ -18,6 +25,11 @@ public class GameController : MonoBehaviour {
         int y = (int)map.listy / 2;
         spawn = new Vector3(x*.32f,y*.32f,0);
 		Player.transform.position = spawn; //Spawn Player
+
+        top.transform.position = new Vector3(top.transform.position.x, map.listy *.32f, top.transform.position.z );
+        right.transform.position = new Vector3(map.listx*.32f,right.transform.position.y, right.transform.position.z );
+
+
 	}
 	
 	// Update is called once per frame
