@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemyHealth : MonoBehaviour {
-    private float MaxHealth;
-    private float health;
+    private float MaxHealth=1;
+    private float health=1;
 
 	// Use this for initialization
 	void Start () {
