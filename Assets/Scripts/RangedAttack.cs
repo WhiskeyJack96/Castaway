@@ -33,6 +33,7 @@ public class RangedAttack : MonoBehaviour {
 				rb = Iarrow.GetComponent<Rigidbody2D> ();
 				rb.velocity = vel;
        			Iarrow.transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);
+       			Iarrow.GetComponent<arrow>().ttag = this.gameObject.tag;
 				StartCoroutine (cooldown (time));
 				ammo = ammo - 1;
 			}

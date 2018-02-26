@@ -58,7 +58,7 @@ public class EnemyRangedAttack : MonoBehaviour {
 			float angle = Mathf.Atan2(toplayer.y, toplayer.x) * Mathf.Rad2Deg;
 			Iarrow = Instantiate (arrow, transform.position + toplayer.normalized*0.25f, new Quaternion(0,0,0,0));
 			rb = Iarrow.GetComponent<Rigidbody2D>();
-			Iarrow.transform.gameObject.tag = this.gameObject.tag;
+			Iarrow.GetComponent<arrow>().ttag = this.gameObject.tag;
        		Iarrow.transform.rotation = Quaternion.AngleAxis(angle -90, Vector3.forward);
 			//ME FIDDLING AROUND WITH PREDICTIVE SHOOTING, CAN'T QUITE FIGURE IT OUT 
 			//Vector3 predict = ((transform.position.x - (arrowSpeed/movespeed.x)*Player.transform.position.x)/(1-(arrowSpeed/movespeed.x)), (transform.position.y - (arrowSpeed/movespeed.y)*Player.transform.position.y)/(1-(arrowSpeed/movespeed.y)), 0);                                             ).normalized
