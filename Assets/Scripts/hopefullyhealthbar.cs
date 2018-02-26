@@ -25,7 +25,6 @@ public class hopefullyhealthbar : MonoBehaviour {
     public void TakeDamage (float amount)
     {
         damaged = true;
-        print("ouch");
         currentHealth -= amount;
         if (amount > 0)
             SoundManager.instance.RandomizeSfx(damageTaken);
@@ -40,7 +39,6 @@ public class hopefullyhealthbar : MonoBehaviour {
 
     void Death()
     {
-        print("died");
         SoundManager.instance.PlaySingle(playerDead);
         isDead = true;
         GameObject.Find("GameController").GetComponent<Timer>().death = true;

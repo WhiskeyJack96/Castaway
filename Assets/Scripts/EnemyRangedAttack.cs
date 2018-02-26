@@ -67,7 +67,6 @@ public class EnemyRangedAttack : MonoBehaviour {
 			//Vector3 newtoplayer = toplayer + movespeed           
 
 			rb.velocity = toplayer.normalized * arrowSpeed;
-			print("I have you now!");
 			StartCoroutine (cooldown (time));
 
 		}
