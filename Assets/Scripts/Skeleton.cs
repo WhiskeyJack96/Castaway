@@ -7,7 +7,7 @@ public class Skeleton : BaseEnemy {
 	// Use this for initialization
 	void Start () {
 		Player = Play;
-		BaseHealth = 20f; //Zombie Base Health
+		BaseHealth = 15f; //Zombie Base Health
         AttackDamage = 20f;
         Movespeed = 1f;
         followRange = 4f;

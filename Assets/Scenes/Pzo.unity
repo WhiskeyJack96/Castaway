@@ -173,61 +173,6 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: f15e22444ada0104d824ffadc4132ca2, type: 2}
   m_IsPrefabParent: 0
---- !u!1 &680042925
-GameObject:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  serializedVersion: 5
-  m_Component:
-  - component: {fileID: 680042926}
-  - component: {fileID: 680042927}
-  m_Layer: 4
-  m_Name: Moob Spoon
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &680042926
-Transform:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680042925}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 2.24, y: 0.89, z: 10}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 828833925}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &680042927
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 680042925}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6497ea555a7f7a34d918521ea8f3dba3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  timedelay: 4
-  enemies: 20
-  IZombie: {fileID: 1508216411433514, guid: a98b89644ae5d4548b96a838d5d6d976, type: 2}
-  ISkele: {fileID: 1944954517620204, guid: 8b71192a31ba81443bf6c79a290f7bb8, type: 2}
-  IBoar: {fileID: 1947327979231376, guid: ae11a991f0e8eec45b45478423daa380, type: 2}
-  delta: 1.25
-  chargemod: 0
-  waitmod: 0
-  shealthmod: 0
-  rangemod: 0
-  zhealthmod: 0
-  movemod: 0
-  mask:
-    serializedVersion: 2
-    m_Bits: 16
 --- !u!1 &828833921
 GameObject:
   m_ObjectHideFlags: 0
@@ -240,7 +185,8 @@ GameObject:
   - component: {fileID: 828833923}
   - component: {fileID: 828833922}
   - component: {fileID: 828833926}
-  m_Layer: 0
+  - component: {fileID: 828833927}
+  m_Layer: 2
   m_Name: Main Camera
   m_TagString: MainCamera
   m_Icon: {fileID: 0}
@@ -306,8 +252,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 1, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 680042926}
+  m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -323,6 +268,27 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   Player: {fileID: 13622124}
+--- !u!114 &828833927
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 828833921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6497ea555a7f7a34d918521ea8f3dba3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  timedelay: 1
+  enemies: 20
+  IZombie: {fileID: 1508216411433514, guid: a98b89644ae5d4548b96a838d5d6d976, type: 2}
+  ISkele: {fileID: 1944954517620204, guid: 8b71192a31ba81443bf6c79a290f7bb8, type: 2}
+  IBoar: {fileID: 1947327979231376, guid: ae11a991f0e8eec45b45478423daa380, type: 2}
+  delta: 1.25
+  mask:
+    serializedVersion: 2
+    m_Bits: 1
+  colorchange: {r: 0, g: 0, b: 0, a: 0}
 --- !u!1001 &1244867664
 Prefab:
   m_ObjectHideFlags: 0
@@ -379,4 +345,46 @@ Prefab:
         type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 76827ec04bc39e84d8ccf1d708d57e5d, type: 2}
+  m_IsPrefabParent: 0
+--- !u!1001 &2123086262
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: 0.8114127
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -0.05030709
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 1.9400505
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819517628655138, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
+      propertyPath: m_RootOrder
+      value: 3
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 100100000, guid: 94fbb69fbf63b2948aebb098b27a0183, type: 2}
   m_IsPrefabParent: 0

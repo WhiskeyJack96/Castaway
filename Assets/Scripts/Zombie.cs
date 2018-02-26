@@ -8,7 +8,7 @@ public class Zombie : BaseEnemy {
 	void Start () {
 		Player = Play;
         BaseHealth = 15f; //Zombie Base Health
-        AttackDamage = 5f;
+        AttackDamage = 15f;
         Movespeed = 1f;
         followRange = 0f;
         scaleSizeandHealth();
