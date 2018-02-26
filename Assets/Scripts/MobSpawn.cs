@@ -27,8 +27,6 @@ public class MobSpawn : MonoBehaviour {
 	public Color colorchange;
 	// Use this for initialization
 	//timer for spawn rate/score
-	//color change by biome
-	//check biome of spawn location.
 	void Start () {
 		Player = GameObject.Find("Player");
 		
@@ -108,6 +106,8 @@ public class MobSpawn : MonoBehaviour {
 			movemod = 2f;
 		}
 	}
+
+
 
 	void varpos()
 	{
