@@ -9,6 +9,8 @@ public class hopefullyhealthbar : MonoBehaviour {
     public float currentHealth;
     public sliding healthSlider;
 
+    public AudioClip damageTaken;
+
     bool isDead = false;
     bool damaged;
 
@@ -22,6 +24,8 @@ public class hopefullyhealthbar : MonoBehaviour {
         damaged = true;
         print("ouch");
         currentHealth -= amount;
+        if (amount > 0)
+            SoundManager.instance.RandomizeSfx(damageTaken);
         if (currentHealth > maxHealth)
             currentHealth = maxHealth;
         //healthSlider.updateSlider(currentHealth);
