@@ -19,8 +19,8 @@ public class NoiseMap : MonoBehaviour {
     public GameObject scarysand;
 
     private int seed2;
-    private float listy= 50;
-    private float listx = 50;
+    public float listy= 50;
+    public float listx = 50;
     List<int> locations;
 
     private float seed3;
